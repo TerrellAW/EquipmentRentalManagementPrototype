@@ -1,0 +1,11 @@
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\bin\Debug\EquipmentRentalManagementPrototype.exe.config
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\bin\Debug\EquipmentRentalManagementPrototype.exe
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\bin\Debug\EquipmentRentalManagementPrototype.pdb
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.csproj.AssemblyReference.cache
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.CustomerUI.resources
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.MainUI.resources
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.Properties.Resources.resources
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.csproj.GenerateResource.cache
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.csproj.CoreCompileInputs.cache
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.exe
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.pdb

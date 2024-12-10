@@ -44,7 +44,8 @@ namespace EquipmentRentalManagementPrototype
 
         private void CustomMgrBtn_Click(object sender, EventArgs e)
         {
-
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
         }
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
