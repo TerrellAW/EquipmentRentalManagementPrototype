@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryUI.Designer.cs">
+      <DependentUpon>CategoryUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="managers\CustomerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategoryUI.resx">
+      <DependentUpon>CategoryUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerUI.resx">
       <DependentUpon>CustomerUI.cs</DependentUpon>
     </EmbeddedResource>
