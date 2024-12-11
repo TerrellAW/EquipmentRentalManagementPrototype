@@ -125,7 +125,7 @@
             this.EquipRentMgrBtn.Name = "EquipRentMgrBtn";
             this.EquipRentMgrBtn.Size = new System.Drawing.Size(168, 41);
             this.EquipRentMgrBtn.TabIndex = 4;
-            this.EquipRentMgrBtn.Text = "Equipment Rental Mgr";
+            this.EquipRentMgrBtn.Text = "Report Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
             this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
