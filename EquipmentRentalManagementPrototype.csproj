@@ -52,12 +52,14 @@
     <Compile Include="CustomerUI.Designer.cs">
       <DependentUpon>CustomerUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="domain\Customer.cs" />
     <Compile Include="MainUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainUI.Designer.cs">
       <DependentUpon>MainUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="managers\CustomerManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomerUI.resx">

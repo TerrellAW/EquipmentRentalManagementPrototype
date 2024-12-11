@@ -19,6 +19,11 @@ namespace EquipmentRentalManagementPrototype
 
         private void CustomerUI_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void splitContainerTop_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

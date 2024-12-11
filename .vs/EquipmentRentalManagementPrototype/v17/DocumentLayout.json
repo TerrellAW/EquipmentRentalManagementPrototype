@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|c:\\users\\terre\\onedrive\\documents\\programming and scripting\\c#\\sait\\equipmentrentalmanagementprototype\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|c:\\users\\terre\\onedrive\\documents\\programming and scripting\\c#\\sait\\equipmentrentalmanagementprototype\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|c:\\users\\terre\\onedrive\\documents\\programming and scripting\\c#\\sait\\equipmentrentalmanagementprototype\\mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|c:\\users\\terre\\onedrive\\documents\\programming and scripting\\c#\\sait\\equipmentrentalmanagementprototype\\managers\\customermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:managers\\customermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|c:\\users\\terre\\onedrive\\documents\\programming and scripting\\c#\\sait\\equipmentrentalmanagementprototype\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:customerui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\mainui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:mainui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15875033-7E5E-440F-B6FE-0DA6ABF41C4B}|EquipmentRentalManagementPrototype.csproj|solutionrelative:mainui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,19 +46,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainUI.cs [Design]",
               "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\MainUI.cs",
               "RelativeDocumentMoniker": "MainUI.cs",
               "ToolTip": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\MainUI.cs [Design]",
               "RelativeToolTip": "MainUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T01:19:08.319Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-08T01:19:08.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainUI.cs",
               "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\MainUI.cs",
               "RelativeDocumentMoniker": "MainUI.cs",
@@ -58,8 +65,7 @@
               "RelativeToolTip": "MainUI.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAA/wDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T23:48:45.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T23:48:45.639Z"
             },
             {
               "$type": "Document",
@@ -75,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CustomerUI.cs [Design]",
               "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\CustomerUI.cs",
               "RelativeDocumentMoniker": "CustomerUI.cs",
@@ -87,15 +93,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CustomerUI.cs",
               "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\CustomerUI.cs",
               "RelativeDocumentMoniker": "CustomerUI.cs",
               "ToolTip": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\CustomerUI.cs",
               "RelativeToolTip": "CustomerUI.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T21:26:17.099Z",
+              "WhenOpened": "2024-12-10T21:26:17.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerManager.cs",
+              "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\managers\\CustomerManager.cs",
+              "RelativeDocumentMoniker": "managers\\CustomerManager.cs",
+              "ToolTip": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\managers\\CustomerManager.cs",
+              "RelativeToolTip": "managers\\CustomerManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T02:28:10.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\domain\\Customer.cs",
+              "RelativeDocumentMoniker": "domain\\Customer.cs",
+              "ToolTip": "C:\\Users\\terre\\OneDrive\\Documents\\Programming and Scripting\\C#\\SAIT\\EquipmentRentalManagementPrototype\\domain\\Customer.cs",
+              "RelativeToolTip": "domain\\Customer.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAUwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T02:37:03.426Z",
               "EditorCaption": ""
             }
           ]
