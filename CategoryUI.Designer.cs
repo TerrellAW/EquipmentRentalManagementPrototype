@@ -1,6 +1,6 @@
 ﻿namespace EquipmentRentalManagementPrototype
 {
-    partial class MainUI
+    partial class CategoryUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.ProgramTitle = new System.Windows.Forms.Label();
+            this.CategoryPageTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.SysMgrBtn = new System.Windows.Forms.Button();
             this.EquipRentMgrBtn = new System.Windows.Forms.Button();
@@ -37,11 +37,20 @@
             this.CustomMgrBtn = new System.Windows.Forms.Button();
             this.CatMgrBtn = new System.Windows.Forms.Button();
             this.EquipMgrBtn = new System.Windows.Forms.Button();
-            this.WelcomeTextLine2 = new System.Windows.Forms.Label();
-            this.WelcomeTextLine1 = new System.Windows.Forms.Label();
+            this.Add = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Search = new System.Windows.Forms.Button();
+            this.DisplayAll = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.OperatorText = new System.Windows.Forms.Label();
             this.OperatorLabel = new System.Windows.Forms.Label();
-            this.login = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,7 +70,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.ProgramTitle);
+            this.splitContainer1.Panel1.Controls.Add(this.CategoryPageTitle);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerTop_Paint);
             // 
             // splitContainer1.Panel2
@@ -69,17 +78,18 @@
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 72;
-            this.splitContainer1.TabIndex = 0;
+            this.splitContainer1.TabIndex = 2;
             // 
-            // ProgramTitle
+            // CategoryPageTitle
             // 
-            this.ProgramTitle.AutoSize = true;
-            this.ProgramTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgramTitle.Location = new System.Drawing.Point(68, 9);
-            this.ProgramTitle.Name = "ProgramTitle";
-            this.ProgramTitle.Size = new System.Drawing.Size(679, 49);
-            this.ProgramTitle.TabIndex = 0;
-            this.ProgramTitle.Text = "Equipment Rental Management System";
+            this.CategoryPageTitle.AutoSize = true;
+            this.CategoryPageTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryPageTitle.Location = new System.Drawing.Point(201, 9);
+            this.CategoryPageTitle.Name = "CategoryPageTitle";
+            this.CategoryPageTitle.Size = new System.Drawing.Size(403, 49);
+            this.CategoryPageTitle.TabIndex = 0;
+            this.CategoryPageTitle.Text = "Category Management";
+            this.CategoryPageTitle.Click += new System.EventHandler(this.CategoryPageTitle_Click);
             // 
             // splitContainer2
             // 
@@ -98,11 +108,20 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.WelcomeTextLine2);
-            this.splitContainer2.Panel2.Controls.Add(this.WelcomeTextLine1);
+            this.splitContainer2.Panel2.Controls.Add(this.Add);
+            this.splitContainer2.Panel2.Controls.Add(this.textBox3);
+            this.splitContainer2.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer2.Panel2.Controls.Add(this.label5);
+            this.splitContainer2.Panel2.Controls.Add(this.label4);
+            this.splitContainer2.Panel2.Controls.Add(this.label3);
+            this.splitContainer2.Panel2.Controls.Add(this.listBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.label2);
+            this.splitContainer2.Panel2.Controls.Add(this.Search);
+            this.splitContainer2.Panel2.Controls.Add(this.DisplayAll);
+            this.splitContainer2.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.label1);
             this.splitContainer2.Panel2.Controls.Add(this.OperatorText);
             this.splitContainer2.Panel2.Controls.Add(this.OperatorLabel);
-            this.splitContainer2.Panel2.Controls.Add(this.login);
             this.splitContainer2.Size = new System.Drawing.Size(800, 374);
             this.splitContainer2.SplitterDistance = 174;
             this.splitContainer2.TabIndex = 0;
@@ -116,7 +135,6 @@
             this.SysMgrBtn.TabIndex = 5;
             this.SysMgrBtn.Text = "System Mgr";
             this.SysMgrBtn.UseVisualStyleBackColor = true;
-            this.SysMgrBtn.Click += new System.EventHandler(this.SysMgrBtn_Click);
             // 
             // EquipRentMgrBtn
             // 
@@ -127,7 +145,6 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Report Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
-            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -138,7 +155,6 @@
             this.RentMgrBtn.TabIndex = 3;
             this.RentMgrBtn.Text = "Rental Mgr";
             this.RentMgrBtn.UseVisualStyleBackColor = true;
-            this.RentMgrBtn.Click += new System.EventHandler(this.RentMgrBtn_Click);
             // 
             // CustomMgrBtn
             // 
@@ -149,7 +165,6 @@
             this.CustomMgrBtn.TabIndex = 2;
             this.CustomMgrBtn.Text = "Customer Mgr";
             this.CustomMgrBtn.UseVisualStyleBackColor = true;
-            this.CustomMgrBtn.Click += new System.EventHandler(this.CustomMgrBtn_Click);
             // 
             // CatMgrBtn
             // 
@@ -160,7 +175,6 @@
             this.CatMgrBtn.TabIndex = 1;
             this.CatMgrBtn.Text = "Category Mgr";
             this.CatMgrBtn.UseVisualStyleBackColor = true;
-            this.CatMgrBtn.Click += new System.EventHandler(this.CatMgrBtn_Click);
             // 
             // EquipMgrBtn
             // 
@@ -171,27 +185,122 @@
             this.EquipMgrBtn.TabIndex = 0;
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
-            this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click);
             // 
-            // WelcomeTextLine2
+            // Add
             // 
-            this.WelcomeTextLine2.AutoSize = true;
-            this.WelcomeTextLine2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeTextLine2.Location = new System.Drawing.Point(129, 204);
-            this.WelcomeTextLine2.Name = "WelcomeTextLine2";
-            this.WelcomeTextLine2.Size = new System.Drawing.Size(321, 21);
-            this.WelcomeTextLine2.TabIndex = 4;
-            this.WelcomeTextLine2.Text = "EQUIPMENT RENTAL MANAGEMENT SYSTEM";
+            this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Add.Location = new System.Drawing.Point(399, 224);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(84, 26);
+            this.Add.TabIndex = 14;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = false;
             // 
-            // WelcomeTextLine1
+            // textBox3
             // 
-            this.WelcomeTextLine1.AutoSize = true;
-            this.WelcomeTextLine1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeTextLine1.Location = new System.Drawing.Point(210, 177);
-            this.WelcomeTextLine1.Name = "WelcomeTextLine1";
-            this.WelcomeTextLine1.Size = new System.Drawing.Size(137, 21);
-            this.WelcomeTextLine1.TabIndex = 3;
-            this.WelcomeTextLine1.Text = "WELCOME TO THE";
+            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(448, 167);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(130, 22);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(448, 126);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(130, 22);
+            this.textBox2.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(309, 167);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Category Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(309, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 18);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Category ID";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(356, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(176, 22);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Category Information";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(19, 156);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(193, 196);
+            this.listBox1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Search Result";
+            // 
+            // Search
+            // 
+            this.Search.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Search.Location = new System.Drawing.Point(129, 83);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(84, 26);
+            this.Search.TabIndex = 6;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = false;
+            // 
+            // DisplayAll
+            // 
+            this.DisplayAll.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DisplayAll.Location = new System.Drawing.Point(18, 83);
+            this.DisplayAll.Name = "DisplayAll";
+            this.DisplayAll.Size = new System.Drawing.Size(84, 26);
+            this.DisplayAll.TabIndex = 5;
+            this.DisplayAll.Text = "Display All";
+            this.DisplayAll.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(18, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 22);
+            this.textBox1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search Category by ID";
             // 
             // OperatorText
             // 
@@ -212,28 +321,15 @@
             this.OperatorLabel.Size = new System.Drawing.Size(80, 15);
             this.OperatorLabel.TabIndex = 1;
             this.OperatorLabel.Text = "Not Logged In";
-            this.OperatorLabel.Click += new System.EventHandler(this.OperatorLabel_Click);
             // 
-            // login
-            // 
-            this.login.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.Location = new System.Drawing.Point(15, 13);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(91, 41);
-            this.login.TabIndex = 0;
-            this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = true;
-            this.login.Click += new System.EventHandler(this.login_Click);
-            // 
-            // MainUI
+            // CategoryUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "MainUI";
-            this.Text = "Equipment Rental Management System";
-            this.Load += new System.EventHandler(this.MainUI_Load);
+            this.Name = "CategoryUI";
+            this.Text = "CategoryUI";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -251,19 +347,27 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label CategoryPageTitle;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button login;
-        private System.Windows.Forms.Button EquipMgrBtn;
+        private System.Windows.Forms.Button SysMgrBtn;
+        private System.Windows.Forms.Button EquipRentMgrBtn;
         private System.Windows.Forms.Button RentMgrBtn;
         private System.Windows.Forms.Button CustomMgrBtn;
         private System.Windows.Forms.Button CatMgrBtn;
-        private System.Windows.Forms.Button EquipRentMgrBtn;
-        private System.Windows.Forms.Button SysMgrBtn;
-        private System.Windows.Forms.Label OperatorLabel;
+        private System.Windows.Forms.Button EquipMgrBtn;
         private System.Windows.Forms.Label OperatorText;
-        private System.Windows.Forms.Label ProgramTitle;
-        private System.Windows.Forms.Label WelcomeTextLine1;
-        private System.Windows.Forms.Label WelcomeTextLine2;
+        private System.Windows.Forms.Label OperatorLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button DisplayAll;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
-
