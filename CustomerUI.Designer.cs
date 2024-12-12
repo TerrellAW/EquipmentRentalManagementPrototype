@@ -37,6 +37,15 @@
             this.CustomMgrBtn = new System.Windows.Forms.Button();
             this.CatMgrBtn = new System.Windows.Forms.Button();
             this.EquipMgrBtn = new System.Windows.Forms.Button();
+            this.DiscountInput = new System.Windows.Forms.TextBox();
+            this.Remove = new System.Windows.Forms.Button();
+            this.Save = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.EmailInput = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.phoneInput = new System.Windows.Forms.TextBox();
+            this.PhoneLabel = new System.Windows.Forms.Label();
+            this.DiscountLabel = new System.Windows.Forms.Label();
             this.StatusSelector = new System.Windows.Forms.ComboBox();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.firstNameInput = new System.Windows.Forms.TextBox();
@@ -54,15 +63,6 @@
             this.SearchCustomerLabel = new System.Windows.Forms.Label();
             this.OperatorText = new System.Windows.Forms.Label();
             this.OperatorLabel = new System.Windows.Forms.Label();
-            this.DiscountSelector = new System.Windows.Forms.ComboBox();
-            this.DiscountLabel = new System.Windows.Forms.Label();
-            this.phoneInput = new System.Windows.Forms.TextBox();
-            this.PhoneLabel = new System.Windows.Forms.Label();
-            this.EmailInput = new System.Windows.Forms.TextBox();
-            this.EmailLabel = new System.Windows.Forms.Label();
-            this.Remove = new System.Windows.Forms.Button();
-            this.Save = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -119,6 +119,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.DiscountInput);
             this.splitContainer2.Panel2.Controls.Add(this.Remove);
             this.splitContainer2.Panel2.Controls.Add(this.Save);
             this.splitContainer2.Panel2.Controls.Add(this.Add);
@@ -127,7 +128,6 @@
             this.splitContainer2.Panel2.Controls.Add(this.phoneInput);
             this.splitContainer2.Panel2.Controls.Add(this.PhoneLabel);
             this.splitContainer2.Panel2.Controls.Add(this.DiscountLabel);
-            this.splitContainer2.Panel2.Controls.Add(this.DiscountSelector);
             this.splitContainer2.Panel2.Controls.Add(this.StatusSelector);
             this.splitContainer2.Panel2.Controls.Add(this.StatusLabel);
             this.splitContainer2.Panel2.Controls.Add(this.firstNameInput);
@@ -209,6 +209,97 @@
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
             // 
+            // DiscountInput
+            // 
+            this.DiscountInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.DiscountInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DiscountInput.Location = new System.Drawing.Point(453, 258);
+            this.DiscountInput.Name = "DiscountInput";
+            this.DiscountInput.Size = new System.Drawing.Size(130, 22);
+            this.DiscountInput.TabIndex = 31;
+            this.DiscountInput.Validating += new System.ComponentModel.CancelEventHandler(this.DiscountInput_Validating);
+            // 
+            // Remove
+            // 
+            this.Remove.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Remove.Location = new System.Drawing.Point(520, 309);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(72, 26);
+            this.Remove.TabIndex = 30;
+            this.Remove.Text = "Remove";
+            this.Remove.UseVisualStyleBackColor = false;
+            // 
+            // Save
+            // 
+            this.Save.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Save.Location = new System.Drawing.Point(418, 309);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(72, 26);
+            this.Save.TabIndex = 29;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = false;
+            // 
+            // Add
+            // 
+            this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Add.Location = new System.Drawing.Point(312, 309);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(72, 26);
+            this.Add.TabIndex = 28;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // EmailInput
+            // 
+            this.EmailInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.EmailInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailInput.Location = new System.Drawing.Point(453, 229);
+            this.EmailInput.Name = "EmailInput";
+            this.EmailInput.Size = new System.Drawing.Size(130, 22);
+            this.EmailInput.TabIndex = 27;
+            this.EmailInput.Validating += new System.ComponentModel.CancelEventHandler(this.EmailInput_Validating);
+            // 
+            // EmailLabel
+            // 
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.Location = new System.Drawing.Point(346, 232);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(45, 18);
+            this.EmailLabel.TabIndex = 26;
+            this.EmailLabel.Text = "Email";
+            // 
+            // phoneInput
+            // 
+            this.phoneInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.phoneInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneInput.Location = new System.Drawing.Point(453, 201);
+            this.phoneInput.Name = "phoneInput";
+            this.phoneInput.Size = new System.Drawing.Size(130, 22);
+            this.phoneInput.TabIndex = 25;
+            this.phoneInput.Validating += new System.ComponentModel.CancelEventHandler(this.phoneInput_Validating);
+            // 
+            // PhoneLabel
+            // 
+            this.PhoneLabel.AutoSize = true;
+            this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneLabel.Location = new System.Drawing.Point(346, 204);
+            this.PhoneLabel.Name = "PhoneLabel";
+            this.PhoneLabel.Size = new System.Drawing.Size(51, 18);
+            this.PhoneLabel.TabIndex = 24;
+            this.PhoneLabel.Text = "Phone";
+            // 
+            // DiscountLabel
+            // 
+            this.DiscountLabel.AutoSize = true;
+            this.DiscountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiscountLabel.Location = new System.Drawing.Point(346, 258);
+            this.DiscountLabel.Name = "DiscountLabel";
+            this.DiscountLabel.Size = new System.Drawing.Size(67, 18);
+            this.DiscountLabel.TabIndex = 23;
+            this.DiscountLabel.Text = "Discount";
+            // 
             // StatusSelector
             // 
             this.StatusSelector.Cursor = System.Windows.Forms.Cursors.Default;
@@ -281,7 +372,7 @@
             this.customerIdInput.Name = "customerIdInput";
             this.customerIdInput.Size = new System.Drawing.Size(130, 22);
             this.customerIdInput.TabIndex = 15;
-            this.customerIdInput.TextChanged += new System.EventHandler(this.customerIdInput_TextChanged);
+            this.customerIdInput.Validating += new System.ComponentModel.CancelEventHandler(this.customerIdInput_Validating);
             // 
             // CustomerIdLabl
             // 
@@ -385,101 +476,6 @@
             this.OperatorLabel.TabIndex = 1;
             this.OperatorLabel.Text = "Not Logged In";
             // 
-            // DiscountSelector
-            // 
-            this.DiscountSelector.Cursor = System.Windows.Forms.Cursors.Default;
-            this.DiscountSelector.FormattingEnabled = true;
-            this.DiscountSelector.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.DiscountSelector.Location = new System.Drawing.Point(453, 257);
-            this.DiscountSelector.Name = "DiscountSelector";
-            this.DiscountSelector.Size = new System.Drawing.Size(130, 24);
-            this.DiscountSelector.TabIndex = 22;
-            this.DiscountSelector.Text = "Yes";
-            this.DiscountSelector.SelectedIndexChanged += new System.EventHandler(this.DiscountSelector_SelectedIndexChanged);
-            // 
-            // DiscountLabel
-            // 
-            this.DiscountLabel.AutoSize = true;
-            this.DiscountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiscountLabel.Location = new System.Drawing.Point(346, 258);
-            this.DiscountLabel.Name = "DiscountLabel";
-            this.DiscountLabel.Size = new System.Drawing.Size(67, 18);
-            this.DiscountLabel.TabIndex = 23;
-            this.DiscountLabel.Text = "Discount";
-            // 
-            // phoneInput
-            // 
-            this.phoneInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.phoneInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneInput.Location = new System.Drawing.Point(453, 201);
-            this.phoneInput.Name = "phoneInput";
-            this.phoneInput.Size = new System.Drawing.Size(130, 22);
-            this.phoneInput.TabIndex = 25;
-            this.phoneInput.TextChanged += new System.EventHandler(this.phoneInput_TextChanged);
-            // 
-            // PhoneLabel
-            // 
-            this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneLabel.Location = new System.Drawing.Point(346, 204);
-            this.PhoneLabel.Name = "PhoneLabel";
-            this.PhoneLabel.Size = new System.Drawing.Size(51, 18);
-            this.PhoneLabel.TabIndex = 24;
-            this.PhoneLabel.Text = "Phone";
-            // 
-            // EmailInput
-            // 
-            this.EmailInput.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.EmailInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EmailInput.Location = new System.Drawing.Point(453, 229);
-            this.EmailInput.Name = "EmailInput";
-            this.EmailInput.Size = new System.Drawing.Size(130, 22);
-            this.EmailInput.TabIndex = 27;
-            this.EmailInput.TextChanged += new System.EventHandler(this.EmailInput_TextChanged);
-            // 
-            // EmailLabel
-            // 
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(346, 232);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(45, 18);
-            this.EmailLabel.TabIndex = 26;
-            this.EmailLabel.Text = "Email";
-            // 
-            // Remove
-            // 
-            this.Remove.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Remove.Location = new System.Drawing.Point(520, 309);
-            this.Remove.Name = "Remove";
-            this.Remove.Size = new System.Drawing.Size(72, 26);
-            this.Remove.TabIndex = 30;
-            this.Remove.Text = "Remove";
-            this.Remove.UseVisualStyleBackColor = false;
-            // 
-            // Save
-            // 
-            this.Save.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Save.Location = new System.Drawing.Point(418, 309);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(72, 26);
-            this.Save.TabIndex = 29;
-            this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = false;
-            // 
-            // Add
-            // 
-            this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Add.Location = new System.Drawing.Point(312, 309);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(72, 26);
-            this.Add.TabIndex = 28;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = false;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -536,9 +532,9 @@
         private System.Windows.Forms.TextBox phoneInput;
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label DiscountLabel;
-        private System.Windows.Forms.ComboBox DiscountSelector;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.TextBox DiscountInput;
     }
 }

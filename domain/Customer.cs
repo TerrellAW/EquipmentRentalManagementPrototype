@@ -14,9 +14,9 @@ namespace EquipmentRentalManagementPrototype.domain
         private string _firstName;
         private string _phone;
         private string _email;
-        private bool _banned;
-        private bool _discount;
-        private int _salesAmount;
+        private bool _status;
+        private double _discount;
+        private double _salesAmount;
 
         // Properties
         public int Id
@@ -44,17 +44,17 @@ namespace EquipmentRentalManagementPrototype.domain
             get { return _email; }
             set { _email = value; }
         }
-        public bool Banned
+        public bool Status
         {
-            get { return _banned; }
-            set { _banned = value; }
+            get { return _status; }
+            set { _status = value; }
         }
-        public bool Discount
+        public double Discount
         {
             get { return _discount; }
             set { _discount = value; }
         }
-        public int SalesAmount
+        public double SalesAmount
         {
             get { return _salesAmount; }
             set { _salesAmount = value; }
@@ -68,18 +68,18 @@ namespace EquipmentRentalManagementPrototype.domain
             _firstName = "";
             _phone = "";
             _email = "";
-            _banned = false;
-            _discount = false;
+            _status = false;
+            _discount = 0;
             _salesAmount = 0;
         }
-        public Customer(int id, string lastName, string firstName, string phone, string email, bool banned, bool discount, int salesAmount)
+        public Customer(int id, string lastName, string firstName, string phone, string email, bool banned, double discount, int salesAmount)
         {
             Id = id;
             LastName = lastName;
             FirstName = firstName;
             Phone = phone;
             Email = email;
-            Banned = banned;
+            Status = banned;
             Discount = discount;
             SalesAmount = salesAmount;
         }
@@ -88,13 +88,14 @@ namespace EquipmentRentalManagementPrototype.domain
         public override string ToString()
         {
             return 
+                "" +
                 $"ID: {Id}\n " +
                 $"Name: {FirstName} {LastName}\n " +
                 $"Phone Number: {Phone}\n " +
                 $"Email: {Email}\n " +
-                $"Banned: {Banned}\n " +
-                $"Discount: {Discount}\n " +
-                $"Sales Amount: {SalesAmount}";
+                $"Active: {Status}\n " +
+                $"Discount: {Discount}%\n " +
+                $"Sales Amount: ${SalesAmount}";
         }
     }
 }
