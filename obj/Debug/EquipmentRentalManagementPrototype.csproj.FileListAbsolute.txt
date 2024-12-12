@@ -9,3 +9,5 @@ C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRen
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.csproj.CoreCompileInputs.cache
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.exe
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.pdb
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.CategoryUI.resources
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.EquipmentUI.resources
