@@ -37,8 +37,7 @@ namespace EquipmentRentalManagementPrototype.domain
 
         public override string ToString()
         {
-            return $"Category ID: {id}\n" +
-                $"Category Name: {name}";
+            return $"{id} - {name}";
         }
 
     }
