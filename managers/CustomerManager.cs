@@ -9,14 +9,14 @@ namespace EquipmentRentalManagementPrototype.managers
 {
     internal class CustomerManager
     {
-        private List<Customer> customerList = new List<Customer>();
+        private static List<Customer> customerList = new List<Customer>();
 
-        public void AddCustomer(Customer customer)
+        public static void AddCustomer(Customer customer)
         {
             customerList.Add(customer);
         }
 
-        public Customer SearchCustomer(string fName, string lName)
+        public static Customer SearchCustomer(string fName, string lName)
         {
             foreach (Customer customer in customerList)
             {
@@ -32,7 +32,7 @@ namespace EquipmentRentalManagementPrototype.managers
             return null;
         }
 
-        public void UpdateCustomer(Customer customer)
+        public static void UpdateCustomer(Customer customer)
         {
             Customer existingCustomer = SearchCustomer(customer.FirstName, customer.LastName);
             if (existingCustomer != null)
@@ -42,7 +42,7 @@ namespace EquipmentRentalManagementPrototype.managers
                 existingCustomer.LastName = customer.LastName;
                 existingCustomer.Phone = customer.Phone;
                 existingCustomer.Email = customer.Email;
-                existingCustomer.Banned = customer.Banned;
+                existingCustomer.Status = customer.Status;
                 existingCustomer.Discount = customer.Discount;
                 existingCustomer.SalesAmount = customer.SalesAmount;
             }

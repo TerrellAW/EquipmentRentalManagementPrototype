@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EquipmentRentalManagementPrototype.domain;
+using EquipmentRentalManagementPrototype.managers;
 
 namespace EquipmentRentalManagementPrototype
 {
@@ -16,10 +18,10 @@ namespace EquipmentRentalManagementPrototype
         int inputId;
         string inputLastName;
         string inputFirstName;
-        bool status;
+        bool status = true;
         string inputPhone;
         string inputEmail;
-        bool inputDiscount;
+        double inputDiscount = 0;
 
         public CustomerUI()
         {
@@ -56,7 +58,7 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void customerIdInput_TextChanged(object sender, EventArgs e)
+        private void customerIdInput_Validating(object sender, EventArgs e)
         {
             TextBox input = (TextBox)sender;
             try
@@ -65,7 +67,8 @@ namespace EquipmentRentalManagementPrototype
             }
             catch (FormatException)
             {
-                MessageBox.Show("Please enter a valid number.");
+                input.Text = string.Empty;
+                MessageBox.Show("Please enter a valid customer ID number.");
             }
         }
 
@@ -95,43 +98,102 @@ namespace EquipmentRentalManagementPrototype
             }
         }
 
-        private void phoneInput_TextChanged(object sender, EventArgs e)
+        private void phoneInput_Validating(object sender, EventArgs e)
         {
             TextBox input = (TextBox)sender;
-            inputPhone = input.Text;
-        }
-
-        private void EmailInput_TextChanged(object sender, EventArgs e)
-        {
-            TextBox input = (TextBox)sender;
-            inputEmail = input.Text;
-        }
-
-        private void DiscountSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox comboBox = (ComboBox)sender;
-
-            if (comboBox.Text == "Yes")
+            string errorMessage = "Please enter a valid phone number.";
+            try
             {
-                inputDiscount = true;
+                string cleanedPhone = input.Text.Replace("(", "")
+                                                .Replace(")", "")
+                                                .Replace("-", "")
+                                                .Replace(" ", "");
+
+                long phoneNum = long.Parse(cleanedPhone);
+
+                if (string.IsNullOrEmpty(cleanedPhone))
+                {
+                    input.Text = string.Empty;
+                    MessageBox.Show(errorMessage);
+                    return;
+                }
+                else if (cleanedPhone.Length != 10)
+                {
+                    input.Text = string.Empty;
+                    MessageBox.Show(errorMessage);
+                    return;
+                }
+                string formattedPhone = $"{cleanedPhone.Substring(0, 3)}-{cleanedPhone.Substring(3, 3)}-{cleanedPhone.Substring(6, 4)}";
+                inputPhone = formattedPhone;
             }
-            else
+            catch (FormatException)
             {
-                inputDiscount = false;
+                input.Text = string.Empty;
+                MessageBox.Show(errorMessage);
+            }
+        }
+
+        private void EmailInput_Validating(object sender, EventArgs e)
+        {
+            TextBox input = (TextBox)sender;
+            string errorMessage = "Please enter a valid email address.";
+            if (string.IsNullOrEmpty(input.Text))
+            {
+                input.Text = string.Empty;
+                MessageBox.Show(errorMessage);
+                return;
+            }
+            else if (!input.Text.Contains("@") || !input.Text.Contains("."))
+            {
+                input.Text = string.Empty;
+                MessageBox.Show(errorMessage);
+                return;
+            }
+            inputEmail = input.Text.ToLower();
+        }
+
+        private void DiscountInput_Validating(object sender, EventArgs e)
+        {
+            TextBox input = (TextBox)sender;
+            string errorMessage = "Please enter a valid discount percentage.";
+            double inputDouble;
+            try
+            {
+                inputDouble = double.Parse(input.Text);
+                if (inputDouble >= 0 && inputDouble <= 100)
+                {
+                    inputDiscount = inputDouble;
+                }
+                else
+                {
+                    input.Text = string.Empty;
+                    MessageBox.Show(errorMessage);
+                }
+            }
+            catch (FormatException)
+            {
+                input.Text = string.Empty;
+                MessageBox.Show(errorMessage);
             }
         }
 
         private void Add_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine(
-                $"Id: {inputId}\n" +
-                $"Last Name: {inputLastName}\n" +
-                $"First Name: {inputFirstName}\n" +
-                $"Status: {status}\n" +
-                $"Phone: {inputPhone}\n" +
-                $"Email: {inputEmail}\n" +
-                $"Discount: {inputDiscount}\n"
+            // Create new customer object and add to customerList
+            Customer customer = new Customer(
+                inputId, 
+                inputLastName, 
+                inputFirstName, 
+                inputPhone, 
+                inputEmail, 
+                status, 
+                inputDiscount, 
+                0
                 );
+
+            Debug.WriteLine(customer.ToString());
+
+            CustomerManager.AddCustomer(customer);
 
             // Add customer to database
 
