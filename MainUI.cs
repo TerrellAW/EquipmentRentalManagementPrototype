@@ -34,12 +34,14 @@ namespace EquipmentRentalManagementPrototype
 
         private void EquipMgrBtn_Click(object sender, EventArgs e)
         {
-
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
         }
 
         private void CatMgrBtn_Click(object sender, EventArgs e)
         {
-
+            CategoryUI categoryUI = new CategoryUI();
+            categoryUI.Show();
         }
 
         private void CustomMgrBtn_Click(object sender, EventArgs e)
