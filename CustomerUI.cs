@@ -22,6 +22,8 @@ namespace EquipmentRentalManagementPrototype
         string inputPhone;
         string inputEmail;
         double inputDiscount = 0;
+        Customer displayedCustomer;
+        string inputSearch;
 
         public CustomerUI()
         {
@@ -38,24 +40,84 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_Validating(object sender, EventArgs e)
         {
+            TextBox input = (TextBox)sender;
+            string fName = string.Empty;
+            string lName = string.Empty;
+            if (input.Text.Contains(" "))
+            {
+                string[] fullName = input.Text.Split(' ');
+                lName = fullName[0];
+                lName = fullName[1];
+            }
+            else
+            {
+                fName = input.Text;
+                lName = input.Text;
+            }
 
+            listBox1.DataSource = CustomerManager.SearchCustomer(fName, lName);
         }
 
         private void Search_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void DisplayAll_Click(object sender, EventArgs e)
         {
-
+            listBox1.DataSource = CustomerManager.DisplayAllCustomers();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string selectedCustomer;
+            int customerId;
+            if (listBox1.SelectedItem != null)
+            {
+                selectedCustomer = listBox1.SelectedItem.ToString();
+                try
+                {
+                    customerId = int.Parse(selectedCustomer.Substring(0, 1));
+                    Debug.WriteLine("Selected customer's ID: " + customerId);
 
+                    // Search for the customer in the customerList
+                    displayedCustomer = CustomerManager.CustomerList.FirstOrDefault(customer => customer.Id == customerId);
+
+                    if (displayedCustomer != null)
+                    {
+                        customerIdInput.Text = $"{displayedCustomer.Id}";
+                        customerIdInput_Validating(customerIdInput, e);
+
+                        lastNameInput.Text = displayedCustomer.LastName;
+                        lastNameInput_TextChanged(lastNameInput, e);
+
+                        firstNameInput.Text = displayedCustomer.FirstName;
+                        firstNameInput_TextChanged(firstNameInput, e);
+
+                        StatusSelector.SelectedIndex = displayedCustomer.Status ? 0 : 1;
+                        StatusSelector_SelectedIndexChanged(StatusSelector, e);
+
+                        phoneInput.Text = displayedCustomer.Phone;
+                        phoneInput_Validating(phoneInput, e);
+
+                        EmailInput.Text = displayedCustomer.Email;
+                        EmailInput_Validating(EmailInput, e);
+
+                        DiscountInput.Text = $"{displayedCustomer.Discount}";
+                        DiscountInput_Validating(DiscountInput, e);
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Customer not found.");
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Customer ID is invalid.");
+                }
+            }
         }
 
         private void customerIdInput_Validating(object sender, EventArgs e)
@@ -193,10 +255,41 @@ namespace EquipmentRentalManagementPrototype
 
             Debug.WriteLine(customer.ToString());
 
+            // Deal with duplicate customer IDs
+            CustomerManager.DeleteCustomer(CustomerManager.SearchCustomerId(inputId));
+
             CustomerManager.AddCustomer(customer);
+
+            // Clear input fields
+            customerIdInput.Text = string.Empty;
+            lastNameInput.Text = string.Empty;
+            firstNameInput.Text = string.Empty;
+            phoneInput.Text = string.Empty;
+            EmailInput.Text = string.Empty;
+            DiscountInput.Text = string.Empty;
 
             // Add customer to database
 
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            if (displayedCustomer != null)
+            {
+                CustomerManager.DeleteCustomer(displayedCustomer);
+                displayedCustomer = null;
+                customerIdInput.Text = string.Empty;
+                lastNameInput.Text = string.Empty;
+                firstNameInput.Text = string.Empty;
+                StatusSelector.SelectedIndex = 0;
+                phoneInput.Text = string.Empty;
+                EmailInput.Text = string.Empty;
+                DiscountInput.Text = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer to remove.");
+            }
         }
     }
 }

@@ -11,20 +11,38 @@ namespace EquipmentRentalManagementPrototype.managers
     {
         private static List<Customer> customerList = new List<Customer>();
 
+        public static List<Customer> CustomerList
+        {
+            get { return customerList; }
+        }
+
         public static void AddCustomer(Customer customer)
         {
             customerList.Add(customer);
         }
 
-        public static Customer SearchCustomer(string fName, string lName)
+        public static List<string> SearchCustomer(string fName, string lName)
         {
+            List<string> searchedCustomers = new List<string>();
             foreach (Customer customer in customerList)
             {
                 if (customer.FirstName == fName)
                 {
-                    return customer;
+                    searchedCustomers.Add($"{customer.Id} - {customer.FirstName} {customer.LastName}");
                 }
                 else if (customer.LastName == lName)
+                {
+                    searchedCustomers.Add($"{customer.Id} - {customer.FirstName} {customer.LastName}");
+                }
+            }
+            return searchedCustomers;
+        }
+
+        public static Customer SearchCustomerId(int customerId)
+        {
+            foreach (Customer customer in customerList)
+            {
+                if (customer.Id == customerId)
                 {
                     return customer;
                 }
@@ -34,7 +52,7 @@ namespace EquipmentRentalManagementPrototype.managers
 
         public static void UpdateCustomer(Customer customer)
         {
-            Customer existingCustomer = SearchCustomer(customer.FirstName, customer.LastName);
+            Customer existingCustomer = SearchCustomerId(customer.Id);
             if (existingCustomer != null)
             {
                 existingCustomer.Id = customer.Id;
@@ -46,6 +64,25 @@ namespace EquipmentRentalManagementPrototype.managers
                 existingCustomer.Discount = customer.Discount;
                 existingCustomer.SalesAmount = customer.SalesAmount;
             }
+        }
+
+        public static void DeleteCustomer(Customer customer)
+        {
+            customerList.Remove(customer);
+        }
+
+        public static List<string> DisplayAllCustomers()
+        {
+            List<string> customerDetails = new List<string>();
+            if (!customerList.Any())
+            {
+                customerDetails.Add("No customers found.");
+            }
+            foreach (Customer customer in customerList)
+            {
+                customerDetails.Add($"{customer.Id} - {customer.FirstName} {customer.LastName}");
+            }
+            return customerDetails;
         }
     }
 }
