@@ -11,7 +11,7 @@ namespace EquipmentRentalManagementPrototype.domain
         private int id;
         private string name;
         private string description;
-        private string categoryName;
+        private int categoryId;
         private double dailyRate;
         private string status;
 
@@ -33,10 +33,10 @@ namespace EquipmentRentalManagementPrototype.domain
             set { description = value; }
         }
 
-        public string CategoryName
+        public int CategoryId
         {
-            get { return categoryName; }
-            set { categoryName = value; }
+            get { return categoryId; }
+            set { categoryId = value; }
         }
 
         public double DailyRate
@@ -56,17 +56,17 @@ namespace EquipmentRentalManagementPrototype.domain
             id = 0;
             name = "";
             description = "";
-            categoryName = "";
+            categoryId = 0;
             dailyRate = 0;
             status = "";
         }
 
-        public Equipment(int id, string name, string description, string categoryName, double dailyRate, string status)
+        public Equipment(int id, string name, string description, int categoryId, double dailyRate, string status)
         {
             this.id = id;
             this.name = name;
             this.description = description;
-            this.categoryName = categoryName;
+            this.categoryId = categoryId;
             this.dailyRate = dailyRate;
             this.status = status;
         }
@@ -76,7 +76,7 @@ namespace EquipmentRentalManagementPrototype.domain
             return $"Equipment ID: {id}\n" +
                 $"Equipment Name: {name}\n" +
                 $"Equipment Description: {description}\n" +
-                $"Equipment Category: {categoryName}\n" +
+                $"Equipment Category: {categoryId}\n" +
                 $"Equipment Daily Rate: {dailyRate}\n" +
                 $"Equipment Status: {status}";
         }

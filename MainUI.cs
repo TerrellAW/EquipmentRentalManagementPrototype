@@ -42,6 +42,8 @@ namespace EquipmentRentalManagementPrototype
         {
             CategoryUI categoryUI = new CategoryUI();
             categoryUI.Show();
+
+            this.Hide();
         }
 
         private void CustomMgrBtn_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        private void ReportMgrBtn_Click(object sender, EventArgs e)
         {
 
         }

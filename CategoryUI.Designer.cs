@@ -38,19 +38,20 @@
             this.CatMgrBtn = new System.Windows.Forms.Button();
             this.EquipMgrBtn = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addnameTextBox = new System.Windows.Forms.TextBox();
+            this.addIdTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.categoryListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.Button();
             this.DisplayAll = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OperatorText = new System.Windows.Forms.Label();
             this.OperatorLabel = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,7 +72,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.CategoryPageTitle);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerTop_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -89,7 +89,6 @@
             this.CategoryPageTitle.Size = new System.Drawing.Size(403, 49);
             this.CategoryPageTitle.TabIndex = 0;
             this.CategoryPageTitle.Text = "Category Management";
-            this.CategoryPageTitle.Click += new System.EventHandler(this.CategoryPageTitle_Click);
             // 
             // splitContainer2
             // 
@@ -108,17 +107,18 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.Delete);
             this.splitContainer2.Panel2.Controls.Add(this.Add);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox3);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer2.Panel2.Controls.Add(this.addnameTextBox);
+            this.splitContainer2.Panel2.Controls.Add(this.addIdTextBox);
             this.splitContainer2.Panel2.Controls.Add(this.label5);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
-            this.splitContainer2.Panel2.Controls.Add(this.listBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.categoryListBox);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Controls.Add(this.Search);
             this.splitContainer2.Panel2.Controls.Add(this.DisplayAll);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.searchTextBox);
             this.splitContainer2.Panel2.Controls.Add(this.label1);
             this.splitContainer2.Panel2.Controls.Add(this.OperatorText);
             this.splitContainer2.Panel2.Controls.Add(this.OperatorLabel);
@@ -189,30 +189,31 @@
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Add.Location = new System.Drawing.Point(399, 224);
+            this.Add.Location = new System.Drawing.Point(337, 222);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(84, 26);
             this.Add.TabIndex = 14;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // textBox3
+            // addnameTextBox
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(448, 167);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 22);
-            this.textBox3.TabIndex = 13;
+            this.addnameTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.addnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addnameTextBox.Location = new System.Drawing.Point(448, 167);
+            this.addnameTextBox.Name = "addnameTextBox";
+            this.addnameTextBox.Size = new System.Drawing.Size(130, 22);
+            this.addnameTextBox.TabIndex = 13;
             // 
-            // textBox2
+            // addIdTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(448, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 22);
-            this.textBox2.TabIndex = 12;
+            this.addIdTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.addIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addIdTextBox.Location = new System.Drawing.Point(448, 126);
+            this.addIdTextBox.Name = "addIdTextBox";
+            this.addIdTextBox.Size = new System.Drawing.Size(130, 22);
+            this.addIdTextBox.TabIndex = 12;
             // 
             // label5
             // 
@@ -244,14 +245,15 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Category Information";
             // 
-            // listBox1
+            // categoryListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(19, 156);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(193, 196);
-            this.listBox1.TabIndex = 8;
+            this.categoryListBox.FormattingEnabled = true;
+            this.categoryListBox.ItemHeight = 16;
+            this.categoryListBox.Location = new System.Drawing.Point(19, 156);
+            this.categoryListBox.Name = "categoryListBox";
+            this.categoryListBox.Size = new System.Drawing.Size(193, 196);
+            this.categoryListBox.TabIndex = 8;
+            this.categoryListBox.SelectedIndexChanged += new System.EventHandler(this.categoryListBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -272,6 +274,7 @@
             this.Search.TabIndex = 6;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = false;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // DisplayAll
             // 
@@ -282,15 +285,16 @@
             this.DisplayAll.TabIndex = 5;
             this.DisplayAll.Text = "Display All";
             this.DisplayAll.UseVisualStyleBackColor = false;
+            this.DisplayAll.Click += new System.EventHandler(this.DisplayAll_Click);
             // 
-            // textBox1
+            // searchTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(18, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 22);
-            this.textBox1.TabIndex = 4;
+            this.searchTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchTextBox.Location = new System.Drawing.Point(18, 46);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(195, 22);
+            this.searchTextBox.TabIndex = 4;
             // 
             // label1
             // 
@@ -321,6 +325,17 @@
             this.OperatorLabel.Size = new System.Drawing.Size(80, 15);
             this.OperatorLabel.TabIndex = 1;
             this.OperatorLabel.Text = "Not Logged In";
+            // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Delete.Location = new System.Drawing.Point(475, 222);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(84, 26);
+            this.Delete.TabIndex = 15;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // CategoryUI
             // 
@@ -357,17 +372,18 @@
         private System.Windows.Forms.Button EquipMgrBtn;
         private System.Windows.Forms.Label OperatorText;
         private System.Windows.Forms.Label OperatorLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Button DisplayAll;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox categoryListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox addnameTextBox;
+        private System.Windows.Forms.TextBox addIdTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Delete;
     }
 }

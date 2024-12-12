@@ -1,1 +1,10 @@
 .vs/
+obj/
+bin/
+/packages/
+**/*.csproj.GenerateResource.cache
+**/*.csproj.FileListAbsolute.txt
+**/*.csproj.CoreCompileInputs.cache
+**/*.csproj.AssemblyReference.cache
+**/DesignTimeResolveAssemblyReferencesInput.cache
+**/DesignTimeResolveAssemblyReferences.cache
