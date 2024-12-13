@@ -74,9 +74,9 @@ namespace EquipmentRentalManagementPrototype.domain
         public override string ToString()
         {
             return $"{id} - {name} - {description} \n" +
-                $"\tCategory: {categoryId} " +
-                $"Daily Rate: {dailyRate} " +
-                $"Status: {status}";
+                $"\tCategory: {categoryId}, " +
+                $"Daily Rate: {dailyRate}, " +
+                $"Status: {status} ";
         }
        
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using EquipmentRentalManagementPrototype.domain;
 
 namespace EquipmentRentalManagementPrototype.database
@@ -44,8 +45,21 @@ namespace EquipmentRentalManagementPrototype.database
 
         public void AddEquipment(Equipment equipment)
         {
-            string query = $"INSERT INTO equipment_list (equipment_id, equipment_name, description, category_id, daily_rate, status) VALUES ({equipment.Id}, '{equipment.Name}', '{equipment.Description}', {equipment.CategoryId}, {equipment.DailyRate}, '{equipment.Status}')";
-            dbConnector.ExecuteCommand(query);
+            try
+            {
+                string checkQuery = $"SELECT * FROM equipment_list WHERE equipment_id = {equipment.Id}";
+                var checkResult = dbConnector.ExecuteQuery(checkQuery);
+                if (checkResult.Count > 0)
+                {
+                    throw new Exception("Equipment ID already exists");
+                }
+                string query = $"INSERT INTO equipment_list (equipment_id, equipment_name, description, category_id, daily_rate, status) VALUES ({equipment.Id}, '{equipment.Name}', '{equipment.Description}', {equipment.CategoryId}, {equipment.DailyRate}, '{equipment.Status}')";
+                dbConnector.ExecuteCommand(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void DeleteEquipment(int id)

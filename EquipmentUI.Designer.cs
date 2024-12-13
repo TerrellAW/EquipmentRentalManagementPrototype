@@ -35,6 +35,8 @@
             this.CustomMgrBtn = new System.Windows.Forms.Button();
             this.CatMgrBtn = new System.Windows.Forms.Button();
             this.EquipMgrBtn = new System.Windows.Forms.Button();
+            this.addStatusBox1 = new System.Windows.Forms.TextBox();
+            this.addIdBox2 = new System.Windows.Forms.TextBox();
             this.Remove = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.OperatorLabel = new System.Windows.Forms.Label();
             this.CategoryPageTitle = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.addIdBox2 = new System.Windows.Forms.TextBox();
-            this.addStatusBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -182,10 +182,28 @@
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
             this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click);
             // 
+            // addStatusBox1
+            // 
+            this.addStatusBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.addStatusBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addStatusBox1.Location = new System.Drawing.Point(442, 273);
+            this.addStatusBox1.Name = "addStatusBox1";
+            this.addStatusBox1.Size = new System.Drawing.Size(150, 22);
+            this.addStatusBox1.TabIndex = 27;
+            // 
+            // addIdBox2
+            // 
+            this.addIdBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.addIdBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addIdBox2.Location = new System.Drawing.Point(442, 212);
+            this.addIdBox2.Name = "addIdBox2";
+            this.addIdBox2.Size = new System.Drawing.Size(150, 22);
+            this.addIdBox2.TabIndex = 26;
+            // 
             // Remove
             // 
             this.Remove.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Remove.Location = new System.Drawing.Point(513, 316);
+            this.Remove.Location = new System.Drawing.Point(504, 315);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(80, 26);
             this.Remove.TabIndex = 25;
@@ -196,7 +214,7 @@
             // Save
             // 
             this.Save.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Save.Location = new System.Drawing.Point(412, 316);
+            this.Save.Location = new System.Drawing.Point(403, 315);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(80, 26);
             this.Save.TabIndex = 24;
@@ -208,7 +226,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(309, 277);
+            this.label9.Location = new System.Drawing.Point(297, 277);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 18);
             this.label9.TabIndex = 21;
@@ -227,7 +245,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(309, 247);
+            this.label8.Location = new System.Drawing.Point(297, 247);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 18);
             this.label8.TabIndex = 19;
@@ -237,7 +255,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(309, 216);
+            this.label7.Location = new System.Drawing.Point(297, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 18);
             this.label7.TabIndex = 17;
@@ -250,6 +268,7 @@
             this.addDescBox1.Location = new System.Drawing.Point(442, 158);
             this.addDescBox1.Multiline = true;
             this.addDescBox1.Name = "addDescBox1";
+            this.addDescBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.addDescBox1.Size = new System.Drawing.Size(150, 46);
             this.addDescBox1.TabIndex = 16;
             // 
@@ -257,7 +276,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(309, 158);
+            this.label6.Location = new System.Drawing.Point(297, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 18);
             this.label6.TabIndex = 15;
@@ -266,7 +285,7 @@
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Add.Location = new System.Drawing.Point(312, 316);
+            this.Add.Location = new System.Drawing.Point(303, 315);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(80, 26);
             this.Add.TabIndex = 14;
@@ -296,7 +315,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(309, 129);
+            this.label5.Location = new System.Drawing.Point(297, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 18);
             this.label5.TabIndex = 11;
@@ -306,7 +325,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 102);
+            this.label4.Location = new System.Drawing.Point(297, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 18);
             this.label4.TabIndex = 10;
@@ -325,10 +344,12 @@
             // equipmentListBox
             // 
             this.equipmentListBox.FormattingEnabled = true;
+            this.equipmentListBox.HorizontalExtent = 800;
+            this.equipmentListBox.HorizontalScrollbar = true;
             this.equipmentListBox.ItemHeight = 16;
             this.equipmentListBox.Location = new System.Drawing.Point(19, 156);
             this.equipmentListBox.Name = "equipmentListBox";
-            this.equipmentListBox.Size = new System.Drawing.Size(193, 196);
+            this.equipmentListBox.Size = new System.Drawing.Size(194, 196);
             this.equipmentListBox.TabIndex = 8;
             this.equipmentListBox.SelectedIndexChanged += new System.EventHandler(this.equipmentListBox_SelectedIndexChanged);
             // 
@@ -430,24 +451,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 72;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // addIdBox2
-            // 
-            this.addIdBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.addIdBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addIdBox2.Location = new System.Drawing.Point(442, 212);
-            this.addIdBox2.Name = "addIdBox2";
-            this.addIdBox2.Size = new System.Drawing.Size(150, 22);
-            this.addIdBox2.TabIndex = 26;
-            // 
-            // addStatusBox1
-            // 
-            this.addStatusBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.addStatusBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addStatusBox1.Location = new System.Drawing.Point(442, 273);
-            this.addStatusBox1.Name = "addStatusBox1";
-            this.addStatusBox1.Size = new System.Drawing.Size(150, 22);
-            this.addStatusBox1.TabIndex = 27;
             // 
             // EquipmentUI
             // 
