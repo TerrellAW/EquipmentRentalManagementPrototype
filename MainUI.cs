@@ -63,7 +63,10 @@ namespace EquipmentRentalManagementPrototype
 
         private void ReportMgrBtn_Click(object sender, EventArgs e)
         {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
 
+            this.Hide();
         }
 
         private void SysMgrBtn_Click(object sender, EventArgs e)

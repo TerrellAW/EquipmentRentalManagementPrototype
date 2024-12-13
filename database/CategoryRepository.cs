@@ -53,5 +53,11 @@ namespace EquipmentRentalManagementPrototype.database
             string query = $"DELETE FROM category_list WHERE category_id = {id}";
             dbConnector.ExecuteCommand(query);
         }
+
+        public List<Dictionary<string, object>> GetItemsByCategory()
+        {
+            string query = "SELECT category_id, equipment_name FROM equipment_list";
+            return dbConnector.ExecuteQuery(query);
+        }
     }
 }
