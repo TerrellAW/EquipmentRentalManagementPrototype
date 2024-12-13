@@ -28,6 +28,16 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
+
+        // Navigation buttons
+        private void Home_Click(object sender, EventArgs e)
+        {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
+
+            this.Hide();
+        }
+
         private void EquipMgrBtn_Click(object sender, EventArgs e)
         {
             EquipmentUI equipmentUI = new EquipmentUI();
@@ -62,14 +72,5 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void Home_Click(object sender, EventArgs e)
-        {
-            MainUI mainUI = new MainUI();
-            mainUI.Show();
-
-            this.Hide();
-        }
-
-      
     }
 }
