@@ -176,7 +176,6 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-
             Rental rental = new Rental();
             rental.Show();
 

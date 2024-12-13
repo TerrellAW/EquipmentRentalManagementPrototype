@@ -74,12 +74,14 @@ namespace EquipmentRentalManagementPrototype.database
         public void AddCustomer(Customer customer)
         {
             string query = "INSERT INTO customer_list (customer_id, last_name, first_name, phone, email, customer_status, discount, sales_amount) VALUES (" + customer.Id + ", '" + customer.LastName + "', '" + customer.FirstName + "', '" + customer.Phone + "', '" + customer.Email + "', " + customer.Status + ", " + customer.Discount + ", " + customer.SalesAmount + ")";
+
             dbConnector.ExecuteCommand(query);
         }
 
         public void UpdateCustomer(Customer customerOld, Customer customerNew)
         {
             string query = "UPDATE customer_list SET customer_id = " + customerNew.Id + ", last_name = '" + customerNew.LastName + "', first_name = '" + customerNew.FirstName + "', phone = '" + customerNew.Phone + "', email = '" + customerNew.Email + "', customer_status = " + customerNew.Status + ", discount = " + customerNew.Discount + ", sales_amount = " + customerNew.SalesAmount + " WHERE customer_id = " + customerOld.Id;
+
             dbConnector.ExecuteCommand(query);
         }
 

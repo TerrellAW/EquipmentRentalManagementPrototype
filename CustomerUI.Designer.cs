@@ -453,9 +453,11 @@
             this.SearchCustomerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchCustomerLabel.Location = new System.Drawing.Point(28, 15);
             this.SearchCustomerLabel.Name = "SearchCustomerLabel";
+
             this.SearchCustomerLabel.Size = new System.Drawing.Size(243, 20);
             this.SearchCustomerLabel.TabIndex = 7;
             this.SearchCustomerLabel.Text = "Search Customer by Full Name";
+
             // 
             // OperatorText
             // 
