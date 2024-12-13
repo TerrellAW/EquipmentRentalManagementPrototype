@@ -176,7 +176,7 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            RentalUI rentalUI = new RentalUI();
+            Rental rentalUI = new Rental();
             rentalUI.Show();
 
             this.Hide();
