@@ -33,6 +33,11 @@ namespace EquipmentRentalManagementPrototype
 
         private void Search_Click(object sender, EventArgs e)
         {
+            if (searchTextBox.Text == "")
+            {
+                MessageBox.Show("Please enter a category ID");
+                return;
+            }
             var category = categoryRepository.GetCategoryById(int.Parse(searchTextBox.Text));
             if (category != null)
             {
@@ -48,20 +53,28 @@ namespace EquipmentRentalManagementPrototype
 
         private void Add_Click(object sender, EventArgs e)
         {
-            string name = addnameTextBox.Text;
-            string id = addIdTextBox.Text;
-            if (name != "" && id != "")
+            try
             {
-                categoryRepository.AddCategory(new Category(int.Parse(id), name));
-                MessageBox.Show("Category added");
+                string name = addNameTextBox.Text;
+                string id = addIdTextBox.Text;
+                if (name != "" && id != "")
+                {
+                    categoryRepository.AddCategory(new Category(int.Parse(id), name));
+                    MessageBox.Show("Category added");
 
-                addIdTextBox.Text = "";
-                addnameTextBox.Text = "";
+                    addIdTextBox.Text = "";
+                    addNameTextBox.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please fill in all fields");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please fill in all fields");
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -70,7 +83,7 @@ namespace EquipmentRentalManagementPrototype
             {
                 var category = (Category)categoryListBox.SelectedItem;
                 addIdTextBox.Text = category.Id.ToString();
-                addnameTextBox.Text = category.Name;
+                addNameTextBox.Text = category.Name;
             }
         }
 
@@ -82,7 +95,7 @@ namespace EquipmentRentalManagementPrototype
                 categoryRepository.DeleteCategory(category.Id);
                 categoryListBox.Items.Remove(category);
                 addIdTextBox.Text = "";
-                addnameTextBox.Text = "";
+                addNameTextBox.Text = "";
                 MessageBox.Show("Category deleted");
             }
             else

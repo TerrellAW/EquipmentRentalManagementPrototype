@@ -39,7 +39,7 @@
             this.EquipMgrBtn = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
-            this.addnameTextBox = new System.Windows.Forms.TextBox();
+            this.addNameTextBox = new System.Windows.Forms.TextBox();
             this.addIdTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 72;
-            this.splitContainer1.TabIndex = 2;
+            this.splitContainer1.TabIndex = 3;
             // 
             // CategoryPageTitle
             // 
@@ -109,7 +109,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.Delete);
             this.splitContainer2.Panel2.Controls.Add(this.Add);
-            this.splitContainer2.Panel2.Controls.Add(this.addnameTextBox);
+            this.splitContainer2.Panel2.Controls.Add(this.addNameTextBox);
             this.splitContainer2.Panel2.Controls.Add(this.addIdTextBox);
             this.splitContainer2.Panel2.Controls.Add(this.label5);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
@@ -212,14 +212,14 @@
             this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
-            // addnameTextBox
+            // addNameTextBox
             // 
-            this.addnameTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.addnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addnameTextBox.Location = new System.Drawing.Point(448, 167);
-            this.addnameTextBox.Name = "addnameTextBox";
-            this.addnameTextBox.Size = new System.Drawing.Size(130, 22);
-            this.addnameTextBox.TabIndex = 13;
+            this.addNameTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.addNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addNameTextBox.Location = new System.Drawing.Point(448, 167);
+            this.addNameTextBox.Name = "add1NameTextBox";
+            this.addNameTextBox.Size = new System.Drawing.Size(130, 22);
+            this.addNameTextBox.TabIndex = 13;
             // 
             // addIdTextBox
             // 
@@ -263,6 +263,7 @@
             // categoryListBox
             // 
             this.categoryListBox.FormattingEnabled = true;
+            this.categoryListBox.HorizontalScrollbar = true;
             this.categoryListBox.ItemHeight = 16;
             this.categoryListBox.Location = new System.Drawing.Point(19, 156);
             this.categoryListBox.Name = "categoryListBox";
@@ -383,7 +384,7 @@
         private System.Windows.Forms.ListBox categoryListBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.TextBox addnameTextBox;
+        private System.Windows.Forms.TextBox addNameTextBox;
         private System.Windows.Forms.TextBox addIdTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

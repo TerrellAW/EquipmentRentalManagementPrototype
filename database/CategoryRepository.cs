@@ -44,8 +44,22 @@ namespace EquipmentRentalManagementPrototype.database
 
         public void AddCategory(Category category)
         {
-            string query = $"INSERT INTO category_list (category_id, category_name) VALUES ({category.Id}, '{category.Name}')";
-            dbConnector.ExecuteCommand(query);
+            try
+            {
+                string checkQuery = $"SELECT * FROM category_list WHERE category_id = {category.Id}";
+                var checkResult = dbConnector.ExecuteQuery(checkQuery);
+                if (checkResult.Count > 0)
+                {
+                   throw new Exception("Category ID already exists");
+                }
+                string query = $"INSERT INTO category_list (category_id, category_name) VALUES ({category.Id}, '{category.Name}')";
+                dbConnector.ExecuteCommand(query);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
         }
 
         public void DeleteCategory(int id)
