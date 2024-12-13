@@ -201,7 +201,7 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Report Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
-            //this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
+            this.EquipRentMgrBtn.Click += new System.EventHandler(this.ReportMgrBtn_Click);
             // 
             // RentMgrBtn
             // 

@@ -45,3 +45,4 @@ C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRen
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\Equipmen.E6F3460F.Up2Date
 C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.ReportUI.resources
+C:\Users\terre\OneDrive\Documents\Programming and Scripting\C#\SAIT\EquipmentRentalManagementPrototype\obj\Debug\EquipmentRentalManagementPrototype.Rental.resources
