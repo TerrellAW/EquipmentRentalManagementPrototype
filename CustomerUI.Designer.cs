@@ -31,7 +31,9 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.CustomerPageTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+
             this.Home = new System.Windows.Forms.Button();
+
             this.ReportMgrBtn = new System.Windows.Forms.Button();
             this.RentMgrBtn = new System.Windows.Forms.Button();
             this.CustomMgrBtn = new System.Windows.Forms.Button();
@@ -109,7 +111,9 @@
             // 
             // splitContainer2.Panel1
             // 
+
             this.splitContainer2.Panel1.Controls.Add(this.Home);
+
             this.splitContainer2.Panel1.Controls.Add(this.ReportMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.RentMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CustomMgrBtn);
@@ -149,6 +153,7 @@
             // 
             // Home
             // 
+
             this.Home.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home.Location = new System.Drawing.Point(3, 280);
             this.Home.Name = "Home";
@@ -157,6 +162,7 @@
             this.Home.Text = "Home Page";
             this.Home.UseVisualStyleBackColor = true;
             this.Home.Click += new System.EventHandler(this.Home_Click);
+
             // 
             // ReportMgrBtn
             // 
@@ -499,7 +505,9 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label CustomerPageTitle;
         private System.Windows.Forms.SplitContainer splitContainer2;
+
         private System.Windows.Forms.Button Home;
+
         private System.Windows.Forms.Button ReportMgrBtn;
         private System.Windows.Forms.Button RentMgrBtn;
         private System.Windows.Forms.Button CustomMgrBtn;

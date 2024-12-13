@@ -88,5 +88,17 @@ namespace EquipmentRentalManagementPrototype.database
             string query = "DELETE FROM customer_list WHERE customer_id = " + customer.Id;
             dbConnector.ExecuteCommand(query);
         }
+
+        public List<Dictionary<string, object>> GetSalesByDate()
+        {
+            string query = "SELECT DATE(rental_date) AS date, SUM(cost) AS total_sales FROM rental_list GROUP BY DATE(rental_date)";
+            return dbConnector.ExecuteQuery(query);
+        }
+
+        public List<Dictionary<string, object>> GetSalesByCustomer()
+        {
+            string query = "SELECT customer_id, SUM(cost) AS total_sales FROM rental_list GROUP BY customer_id";
+            return dbConnector.ExecuteQuery(query);
+        }
     }
 }

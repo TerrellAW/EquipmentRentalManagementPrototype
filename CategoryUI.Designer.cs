@@ -168,6 +168,7 @@
             this.CustomMgrBtn.TabIndex = 2;
             this.CustomMgrBtn.Text = "Customer Mgr";
             this.CustomMgrBtn.UseVisualStyleBackColor = true;
+            this.CustomMgrBtn.Click += new System.EventHandler(this.CustomMgrBtn_Click);
             // 
             // CatMgrBtn
             // 

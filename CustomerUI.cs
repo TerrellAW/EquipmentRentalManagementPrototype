@@ -343,8 +343,8 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            Rental rentalUI = new Rental();
-            rentalUI.Show();
+            Rental rental = new Rental();
+            rental.Show();
 
             this.Hide();
         }
@@ -354,7 +354,5 @@ namespace EquipmentRentalManagementPrototype
             CustomerUI customerUI = new CustomerUI();
             customerUI.Show();
 
-            this.Hide();
-        }
     }
 }
