@@ -41,6 +41,7 @@ namespace EquipmentRentalManagementPrototype
             }
             else
             {
+                categoryListBox.Items.Clear();
                 MessageBox.Show("Category not found");
             }
         }
@@ -88,6 +89,50 @@ namespace EquipmentRentalManagementPrototype
             {
                 MessageBox.Show("Please select a category to delete");
             }
+
+        }
+
+
+        // Navigation buttons
+        private void Home_Click(object sender, EventArgs e)
+        {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
+
+            this.Hide();
+        }
+
+        private void EquipMgrBtn_Click(object sender, EventArgs e)
+        {
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
+
+            this.Hide();
+        }
+
+        private void CatMgrBtn_Click(object sender, EventArgs e)
+        {
+            CategoryUI categoryUI = new CategoryUI();
+            categoryUI.Show();
+
+            this.Hide();
+        }
+
+        private void CustomMgrBtn_Click(object sender, EventArgs e)
+        {
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
+
+            this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

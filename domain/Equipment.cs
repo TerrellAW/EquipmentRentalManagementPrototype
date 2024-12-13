@@ -12,7 +12,7 @@ namespace EquipmentRentalManagementPrototype.domain
         private string name;
         private string description;
         private int categoryId;
-        private double dailyRate;
+        private float dailyRate;
         private string status;
 
         public int Id
@@ -39,7 +39,7 @@ namespace EquipmentRentalManagementPrototype.domain
             set { categoryId = value; }
         }
 
-        public double DailyRate
+        public float DailyRate
         {
             get { return dailyRate; }
             set { dailyRate = value; }
@@ -61,7 +61,7 @@ namespace EquipmentRentalManagementPrototype.domain
             status = "";
         }
 
-        public Equipment(int id, string name, string description, int categoryId, double dailyRate, string status)
+        public Equipment(int id, string name, string description, int categoryId, float dailyRate, string status)
         {
             this.id = id;
             this.name = name;
@@ -73,12 +73,10 @@ namespace EquipmentRentalManagementPrototype.domain
 
         public override string ToString()
         {
-            return $"Equipment ID: {id}\n" +
-                $"Equipment Name: {name}\n" +
-                $"Equipment Description: {description}\n" +
-                $"Equipment Category: {categoryId}\n" +
-                $"Equipment Daily Rate: {dailyRate}\n" +
-                $"Equipment Status: {status}";
+            return $"{id} - {name} - {description} \n" +
+                $"\tCategory: {categoryId} " +
+                $"Daily Rate: {dailyRate} " +
+                $"Status: {status}";
         }
        
     }
