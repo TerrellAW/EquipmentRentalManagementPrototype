@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EquipmentRentalManagementPrototype.domain;
 using EquipmentRentalManagementPrototype.managers;
+using EquipmentRentalManagementPrototype.database;
 
 namespace EquipmentRentalManagementPrototype
 {
@@ -24,15 +25,19 @@ namespace EquipmentRentalManagementPrototype
         double inputDiscount = 0;
         Customer displayedCustomer;
         string inputSearch;
+        private CustomerRepository customerRepository;
 
         public CustomerUI()
         {
             InitializeComponent();
+            customerRepository = new CustomerRepository();
         }
 
         private void CustomerUI_Load(object sender, EventArgs e)
         {
-            
+            customerRepository.GetAllCustomers();
+            Debug.WriteLine("Customer List Contains:\n");
+            CustomerManager.ListData();
         }
 
         private void splitContainerTop_Paint(object sender, PaintEventArgs e)
@@ -73,13 +78,15 @@ namespace EquipmentRentalManagementPrototype
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedCustomer;
+            string[] splitCustomer;
             int customerId;
             if (listBox1.SelectedItem != null)
             {
                 selectedCustomer = listBox1.SelectedItem.ToString();
                 try
                 {
-                    customerId = int.Parse(selectedCustomer.Substring(0, 1));
+                    splitCustomer = selectedCustomer.Trim(' ').Split('-');
+                    customerId = int.Parse(splitCustomer[0]);
                     Debug.WriteLine("Selected customer's ID: " + customerId);
 
                     // Search for the customer in the customerList
@@ -255,11 +262,22 @@ namespace EquipmentRentalManagementPrototype
 
             Debug.WriteLine(customer.ToString());
 
+            // Search for customer ID in customerList
+            Customer customerSearched = CustomerManager.SearchCustomerId(inputId);
+
             // Deal with duplicate customer IDs
-            CustomerManager.DeleteCustomer(CustomerManager.SearchCustomerId(inputId));
-
-            CustomerManager.AddCustomer(customer);
-
+            if (customerSearched != null)
+            {
+                CustomerManager.DeleteCustomer(customerSearched);
+                CustomerManager.AddCustomer(customer);
+                customerRepository.UpdateCustomer(customerSearched, customer);
+            }
+            else
+            {
+                CustomerManager.AddCustomer(customer);
+                customerRepository.AddCustomer(customer);
+            }
+            
             // Clear input fields
             customerIdInput.Text = string.Empty;
             lastNameInput.Text = string.Empty;
@@ -267,9 +285,6 @@ namespace EquipmentRentalManagementPrototype
             phoneInput.Text = string.Empty;
             EmailInput.Text = string.Empty;
             DiscountInput.Text = string.Empty;
-
-            // Add customer to database
-
         }
 
         private void Remove_Click(object sender, EventArgs e)
@@ -277,6 +292,7 @@ namespace EquipmentRentalManagementPrototype
             if (displayedCustomer != null)
             {
                 CustomerManager.DeleteCustomer(displayedCustomer);
+                customerRepository.DeleteCustomer(displayedCustomer);
                 displayedCustomer = null;
                 customerIdInput.Text = string.Empty;
                 lastNameInput.Text = string.Empty;
@@ -290,6 +306,32 @@ namespace EquipmentRentalManagementPrototype
             {
                 MessageBox.Show("Please select a customer to remove.");
             }
+        }
+
+        private void EquipMgrBtn_Click(object sender, EventArgs e)
+        {
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
+
+            this.Hide();
+        }
+
+        private void CatMgrBtn_Click(object sender, EventArgs e)
+        {
+            CategoryUI categoryUI = new CategoryUI();
+            categoryUI.Show();
+
+            this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

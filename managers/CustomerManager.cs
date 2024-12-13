@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EquipmentRentalManagementPrototype.domain;
+using System.Diagnostics;
 
 namespace EquipmentRentalManagementPrototype.managers
 {
@@ -83,6 +84,14 @@ namespace EquipmentRentalManagementPrototype.managers
                 customerDetails.Add($"{customer.Id} - {customer.FirstName} {customer.LastName}");
             }
             return customerDetails;
+        }
+
+        public static void ListData()
+        {
+            foreach (Customer customer in customerList)
+            {
+                Debug.WriteLine(customer.ToString());
+            }
         }
     }
 }

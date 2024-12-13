@@ -166,6 +166,7 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Equipment Rental Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -176,6 +177,7 @@
             this.RentMgrBtn.TabIndex = 3;
             this.RentMgrBtn.Text = "Rental Mgr";
             this.RentMgrBtn.UseVisualStyleBackColor = true;
+            this.RentMgrBtn.Click += new System.EventHandler(this.RentMgrBtn_Click);
             // 
             // CustomMgrBtn
             // 
@@ -196,6 +198,7 @@
             this.CatMgrBtn.TabIndex = 1;
             this.CatMgrBtn.Text = "Category Mgr";
             this.CatMgrBtn.UseVisualStyleBackColor = true;
+            this.CatMgrBtn.Click += new System.EventHandler(this.CatMgrBtn_Click);
             // 
             // EquipMgrBtn
             // 
@@ -206,6 +209,7 @@
             this.EquipMgrBtn.TabIndex = 0;
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click);
             // 
             // DiscountInput
             // 
