@@ -17,10 +17,6 @@ namespace EquipmentRentalManagementPrototype
             InitializeComponent();
         }
 
-        private void splitContainerTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void MainUI_Load(object sender, EventArgs e)
         {
@@ -34,7 +30,10 @@ namespace EquipmentRentalManagementPrototype
 
         private void EquipMgrBtn_Click(object sender, EventArgs e)
         {
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
 
+            this.Hide();
         }
 
         private void CatMgrBtn_Click(object sender, EventArgs e)
@@ -49,11 +48,13 @@ namespace EquipmentRentalManagementPrototype
         {
             CustomerUI customerUI = new CustomerUI();
             customerUI.Show();
+
+            this.Hide();
         }
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ReportMgrBtn_Click(object sender, EventArgs e)
@@ -61,14 +62,14 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void SysMgrBtn_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
 
+            this.Hide();
         }
 
-        private void OperatorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

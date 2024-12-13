@@ -31,7 +31,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ProgramTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.SysMgrBtn = new System.Windows.Forms.Button();
+            this.Home = new System.Windows.Forms.Button();
             this.ReportMgrBtn = new System.Windows.Forms.Button();
             this.RentMgrBtn = new System.Windows.Forms.Button();
             this.CustomMgrBtn = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.ProgramTitle);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerTop_Paint);
+        
             // 
             // splitContainer1.Panel2
             // 
@@ -89,7 +89,7 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.SysMgrBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.Home);
             this.splitContainer2.Panel1.Controls.Add(this.ReportMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.RentMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CustomMgrBtn);
@@ -107,16 +107,16 @@
             this.splitContainer2.SplitterDistance = 174;
             this.splitContainer2.TabIndex = 0;
             // 
-            // SysMgrBtn
+            // Home
             // 
-            this.SysMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysMgrBtn.Location = new System.Drawing.Point(3, 280);
-            this.SysMgrBtn.Name = "SysMgrBtn";
-            this.SysMgrBtn.Size = new System.Drawing.Size(168, 41);
-            this.SysMgrBtn.TabIndex = 5;
-            this.SysMgrBtn.Text = "System Mgr";
-            this.SysMgrBtn.UseVisualStyleBackColor = true;
-            this.SysMgrBtn.Click += new System.EventHandler(this.SysMgrBtn_Click);
+            this.Home.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.Location = new System.Drawing.Point(3, 280);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(168, 41);
+            this.Home.TabIndex = 5;
+            this.Home.Text = "Home Page";
+            this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // ReportMgrBtn
             // 
@@ -212,7 +212,7 @@
             this.OperatorLabel.Size = new System.Drawing.Size(80, 15);
             this.OperatorLabel.TabIndex = 1;
             this.OperatorLabel.Text = "Not Logged In";
-            this.OperatorLabel.Click += new System.EventHandler(this.OperatorLabel_Click);
+           
             // 
             // login
             // 
@@ -258,7 +258,7 @@
         private System.Windows.Forms.Button CustomMgrBtn;
         private System.Windows.Forms.Button CatMgrBtn;
         private System.Windows.Forms.Button ReportMgrBtn;
-        private System.Windows.Forms.Button SysMgrBtn;
+        private System.Windows.Forms.Button Home;
         private System.Windows.Forms.Label OperatorLabel;
         private System.Windows.Forms.Label OperatorText;
         private System.Windows.Forms.Label ProgramTitle;
