@@ -33,6 +33,7 @@ namespace EquipmentRentalManagementPrototype
             EquipmentUI equipmentUI = new EquipmentUI();
             equipmentUI.Show();
 
+
             this.Hide();
         }
 
