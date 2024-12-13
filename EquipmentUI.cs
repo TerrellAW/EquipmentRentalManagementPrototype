@@ -176,13 +176,13 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            RentalUI rental = new RentalUI();
+            Rental rental = new Rental();
             rental.Show();
 
             this.Hide();
         }
 
-        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        private void ReportMgrBtn_Click(object sender, EventArgs e)
         {
             ReportUI reportUI = new ReportUI();
             reportUI.Show();
