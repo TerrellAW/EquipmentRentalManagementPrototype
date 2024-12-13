@@ -64,7 +64,10 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            
+            Rental rental = new Rental();
+            rental.Show();
+
+            this.Hide();
         }
 
         private void ReportMgrBtn_Click(object sender, EventArgs e)
