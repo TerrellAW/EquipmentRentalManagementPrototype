@@ -72,6 +72,7 @@ namespace EquipmentRentalManagementPrototype
 
         private void DisplayAll_Click(object sender, EventArgs e)
         {
+            listBox1.DataSource = null;
             listBox1.DataSource = CustomerManager.DisplayAllCustomers();
         }
 
@@ -324,14 +325,36 @@ namespace EquipmentRentalManagementPrototype
             this.Hide();
         }
 
-        private void RentMgrBtn_Click(object sender, EventArgs e)
+        private void Home_Click(object sender, EventArgs e)
         {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
 
+            this.Hide();
         }
 
-        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        private void ReportMgrBtn_Click(object sender, EventArgs e)
         {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
 
+            this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+            RentalUI rentalUI = new RentalUI();
+            rentalUI.Show();
+
+            this.Hide();
+        }
+
+        private void CustomMgrBtn_Click(object sender, EventArgs e)
+        {
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
+
+            this.Hide();
         }
     }
 }

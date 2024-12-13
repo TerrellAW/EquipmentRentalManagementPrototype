@@ -31,8 +31,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.CustomerPageTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.SysMgrBtn = new System.Windows.Forms.Button();
-            this.EquipRentMgrBtn = new System.Windows.Forms.Button();
+            this.Home = new System.Windows.Forms.Button();
+            this.ReportMgrBtn = new System.Windows.Forms.Button();
             this.RentMgrBtn = new System.Windows.Forms.Button();
             this.CustomMgrBtn = new System.Windows.Forms.Button();
             this.CatMgrBtn = new System.Windows.Forms.Button();
@@ -109,8 +109,8 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.SysMgrBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.EquipRentMgrBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.Home);
+            this.splitContainer2.Panel1.Controls.Add(this.ReportMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.RentMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CustomMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CatMgrBtn);
@@ -147,26 +147,27 @@
             this.splitContainer2.SplitterDistance = 174;
             this.splitContainer2.TabIndex = 0;
             // 
-            // SysMgrBtn
+            // Home
             // 
-            this.SysMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysMgrBtn.Location = new System.Drawing.Point(3, 280);
-            this.SysMgrBtn.Name = "SysMgrBtn";
-            this.SysMgrBtn.Size = new System.Drawing.Size(168, 41);
-            this.SysMgrBtn.TabIndex = 5;
-            this.SysMgrBtn.Text = "System Mgr";
-            this.SysMgrBtn.UseVisualStyleBackColor = true;
+            this.Home.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.Location = new System.Drawing.Point(3, 280);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(168, 41);
+            this.Home.TabIndex = 5;
+            this.Home.Text = "Home Page";
+            this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // EquipRentMgrBtn
+            // ReportMgrBtn
             // 
-            this.EquipRentMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquipRentMgrBtn.Location = new System.Drawing.Point(3, 233);
-            this.EquipRentMgrBtn.Name = "EquipRentMgrBtn";
-            this.EquipRentMgrBtn.Size = new System.Drawing.Size(168, 41);
-            this.EquipRentMgrBtn.TabIndex = 4;
-            this.EquipRentMgrBtn.Text = "Equipment Rental Mgr";
-            this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
-            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
+            this.ReportMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportMgrBtn.Location = new System.Drawing.Point(3, 233);
+            this.ReportMgrBtn.Name = "ReportMgrBtn";
+            this.ReportMgrBtn.Size = new System.Drawing.Size(168, 41);
+            this.ReportMgrBtn.TabIndex = 4;
+            this.ReportMgrBtn.Text = "Report Mgr";
+            this.ReportMgrBtn.UseVisualStyleBackColor = true;
+            this.ReportMgrBtn.Click += new System.EventHandler(this.ReportMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -188,6 +189,7 @@
             this.CustomMgrBtn.TabIndex = 2;
             this.CustomMgrBtn.Text = "Customer Mgr";
             this.CustomMgrBtn.UseVisualStyleBackColor = true;
+            this.CustomMgrBtn.Click += new System.EventHandler(this.CustomMgrBtn_Click);
             // 
             // CatMgrBtn
             // 
@@ -224,9 +226,9 @@
             // Remove
             // 
             this.Remove.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Remove.Location = new System.Drawing.Point(511, 309);
+            this.Remove.Location = new System.Drawing.Point(503, 309);
             this.Remove.Name = "Remove";
-            this.Remove.Size = new System.Drawing.Size(72, 26);
+            this.Remove.Size = new System.Drawing.Size(80, 26);
             this.Remove.TabIndex = 30;
             this.Remove.Text = "Remove";
             this.Remove.UseVisualStyleBackColor = false;
@@ -235,9 +237,9 @@
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Add.Location = new System.Drawing.Point(411, 309);
+            this.Add.Location = new System.Drawing.Point(403, 309);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(72, 26);
+            this.Add.Size = new System.Drawing.Size(80, 26);
             this.Add.TabIndex = 28;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
@@ -445,9 +447,9 @@
             this.SearchCustomerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchCustomerLabel.Location = new System.Drawing.Point(28, 15);
             this.SearchCustomerLabel.Name = "SearchCustomerLabel";
-            this.SearchCustomerLabel.Size = new System.Drawing.Size(184, 20);
+            this.SearchCustomerLabel.Size = new System.Drawing.Size(243, 20);
             this.SearchCustomerLabel.TabIndex = 7;
-            this.SearchCustomerLabel.Text = "Search Customer by ID";
+            this.SearchCustomerLabel.Text = "Search Customer by Full Name";
             // 
             // OperatorText
             // 
@@ -497,8 +499,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label CustomerPageTitle;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button SysMgrBtn;
-        private System.Windows.Forms.Button EquipRentMgrBtn;
+        private System.Windows.Forms.Button Home;
+        private System.Windows.Forms.Button ReportMgrBtn;
         private System.Windows.Forms.Button RentMgrBtn;
         private System.Windows.Forms.Button CustomMgrBtn;
         private System.Windows.Forms.Button CatMgrBtn;

@@ -32,7 +32,7 @@
             this.CategoryPageTitle = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.Home = new System.Windows.Forms.Button();
-            this.EquipRentMgrBtn = new System.Windows.Forms.Button();
+            this.ReportMgrBtn = new System.Windows.Forms.Button();
             this.RentMgrBtn = new System.Windows.Forms.Button();
             this.CustomMgrBtn = new System.Windows.Forms.Button();
             this.CatMgrBtn = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.Home);
-            this.splitContainer2.Panel1.Controls.Add(this.EquipRentMgrBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.ReportMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.RentMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CustomMgrBtn);
             this.splitContainer2.Panel1.Controls.Add(this.CatMgrBtn);
@@ -137,16 +137,16 @@
             this.Home.UseVisualStyleBackColor = true;
             this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
-            // EquipRentMgrBtn
+            // ReportMgrBtn
             // 
-            this.EquipRentMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EquipRentMgrBtn.Location = new System.Drawing.Point(3, 233);
-            this.EquipRentMgrBtn.Name = "EquipRentMgrBtn";
-            this.EquipRentMgrBtn.Size = new System.Drawing.Size(168, 41);
-            this.EquipRentMgrBtn.TabIndex = 4;
-            this.EquipRentMgrBtn.Text = "Report Mgr";
-            this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
-            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
+            this.ReportMgrBtn.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportMgrBtn.Location = new System.Drawing.Point(3, 233);
+            this.ReportMgrBtn.Name = "ReportMgrBtn";
+            this.ReportMgrBtn.Size = new System.Drawing.Size(168, 41);
+            this.ReportMgrBtn.TabIndex = 4;
+            this.ReportMgrBtn.Text = "Report Mgr";
+            this.ReportMgrBtn.UseVisualStyleBackColor = true;
+            this.ReportMgrBtn.Click += new System.EventHandler(this.ReportMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -217,7 +217,7 @@
             this.addNameTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.addNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addNameTextBox.Location = new System.Drawing.Point(448, 167);
-            this.addNameTextBox.Name = "add1NameTextBox";
+            this.addNameTextBox.Name = "addNameTextBox";
             this.addNameTextBox.Size = new System.Drawing.Size(130, 22);
             this.addNameTextBox.TabIndex = 13;
             // 
@@ -370,7 +370,7 @@
         private System.Windows.Forms.Label CategoryPageTitle;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button Home;
-        private System.Windows.Forms.Button EquipRentMgrBtn;
+        private System.Windows.Forms.Button ReportMgrBtn;
         private System.Windows.Forms.Button RentMgrBtn;
         private System.Windows.Forms.Button CustomMgrBtn;
         private System.Windows.Forms.Button CatMgrBtn;

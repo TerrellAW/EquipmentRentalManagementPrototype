@@ -64,12 +64,18 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            
+            RentalUI rentalUI = new RentalUI();
+            rentalUI.Show();
+
+            this.Hide();
         }
 
         private void ReportMgrBtn_Click(object sender, EventArgs e)
         {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
 
+            this.Hide();
         }
 
     }
