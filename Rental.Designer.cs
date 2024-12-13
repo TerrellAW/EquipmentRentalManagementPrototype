@@ -122,7 +122,13 @@
             this.splitContainer1.SplitterDistance = 86;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 4;
-            
+            // 
+            // CategoryPageTitle
+            // 
+            this.CategoryPageTitle.Location = new System.Drawing.Point(0, 0);
+            this.CategoryPageTitle.Name = "CategoryPageTitle";
+            this.CategoryPageTitle.Size = new System.Drawing.Size(100, 23);
+            this.CategoryPageTitle.TabIndex = 0;
             // 
             // splitContainer2
             // 
@@ -183,6 +189,7 @@
             this.Home.TabIndex = 5;
             this.Home.Text = "Home Page";
             this.Home.UseVisualStyleBackColor = true;
+            this.Home.Click += new System.EventHandler(this.Home_Click_1);
             // 
             // EquipRentMgrBtn
             // 
@@ -194,6 +201,7 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Report Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
+            //this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -205,6 +213,7 @@
             this.RentMgrBtn.TabIndex = 3;
             this.RentMgrBtn.Text = "Rental Mgr";
             this.RentMgrBtn.UseVisualStyleBackColor = true;
+            this.RentMgrBtn.Click += new System.EventHandler(this.RentMgrBtn_Click_1);
             // 
             // CustomMgrBtn
             // 
@@ -216,6 +225,7 @@
             this.CustomMgrBtn.TabIndex = 2;
             this.CustomMgrBtn.Text = "Customer Mgr";
             this.CustomMgrBtn.UseVisualStyleBackColor = true;
+            this.CustomMgrBtn.Click += new System.EventHandler(this.CustomMgrBtn_Click_1);
             // 
             // CatMgrBtn
             // 
@@ -227,6 +237,7 @@
             this.CatMgrBtn.TabIndex = 1;
             this.CatMgrBtn.Text = "Category Mgr";
             this.CatMgrBtn.UseVisualStyleBackColor = true;
+            this.CatMgrBtn.Click += new System.EventHandler(this.CatMgrBtn_Click_1);
             // 
             // EquipMgrBtn
             // 
@@ -238,6 +249,7 @@
             this.EquipMgrBtn.TabIndex = 0;
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click_1);
             // 
             // button5
             // 
@@ -553,7 +565,6 @@
             this.Name = "Rental";
             this.Text = "Rental";
             this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
