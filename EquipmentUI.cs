@@ -33,6 +33,11 @@ namespace EquipmentRentalManagementPrototype
 
         private void Search_Click(object sender, EventArgs e)
         {
+            if (searchTextBox1.Text == "")
+            {
+                MessageBox.Show("Please enter an equipment ID");
+                return;
+            }
             var eq = equipmentRepository.GetEquipmentById(int.Parse(searchTextBox1.Text));
             if (eq != null)
             {
@@ -48,28 +53,37 @@ namespace EquipmentRentalManagementPrototype
 
         private void Add_Click(object sender, EventArgs e)
         {
-            string id = addIdTextBox1.Text;
-            string name = addNameTextBox1.Text;
-            string description = addDescBox1.Text;
-            string categoryId = addIdBox2.Text;
-            string dailyRate = addRateBox1.Text;
-            string status = addStatusBox1.Text;
-            if (id != "" && name != "" && description != "" && categoryId != "" && dailyRate != "")
+            try
             {
-                equipmentRepository.AddEquipment(new Equipment(int.Parse(id), name, description, int.Parse(categoryId), float.Parse(dailyRate), status));
-                MessageBox.Show("Equipment added");
+                string id = addIdTextBox1.Text;
+                string name = addNameTextBox1.Text;
+                string description = addDescBox1.Text;
+                string categoryId = addIdBox2.Text;
+                string dailyRate = addRateBox1.Text;
+                string status = addStatusBox1.Text;
 
-                addIdTextBox1.Text = "";
-                addNameTextBox1.Text = "";
-                addDescBox1.Text = "";
-                addIdBox2.Text = "";
-                addRateBox1.Text = "";
-                addStatusBox1.Text = "";
+                if (id != "" && name != "" && description != "" && categoryId != "" && dailyRate != "")
+                {
+                    equipmentRepository.AddEquipment(new Equipment(int.Parse(id), name, description, int.Parse(categoryId), float.Parse(dailyRate), status));
+                    MessageBox.Show("Equipment added");
+
+                    addIdTextBox1.Text = "";
+                    addNameTextBox1.Text = "";
+                    addDescBox1.Text = "";
+                    addIdBox2.Text = "";
+                    addRateBox1.Text = "";
+                    addStatusBox1.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please fill all fields");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please fill all fields");
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void Remove_Click(object sender, EventArgs e)
