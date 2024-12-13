@@ -72,7 +72,7 @@ namespace EquipmentRentalManagementPrototype.domain
             _discount = 0;
             _salesAmount = 0;
         }
-        public Customer(int id, string lastName, string firstName, string phone, string email, bool banned, double discount, int salesAmount)
+        public Customer(int id, string lastName, string firstName, string phone, string email, bool banned, double discount, double salesAmount)
         {
             Id = id;
             LastName = lastName;
