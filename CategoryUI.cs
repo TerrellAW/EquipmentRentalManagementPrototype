@@ -41,6 +41,7 @@ namespace EquipmentRentalManagementPrototype
             }
             else
             {
+                categoryListBox.Items.Clear();
                 MessageBox.Show("Category not found");
             }
         }
@@ -91,6 +92,8 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
+
+        // Navigation buttons
         private void Home_Click(object sender, EventArgs e)
         {
             MainUI mainUI = new MainUI();
@@ -121,6 +124,16 @@ namespace EquipmentRentalManagementPrototype
             customerUI.Show();
 
             this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EquipRentMgrBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

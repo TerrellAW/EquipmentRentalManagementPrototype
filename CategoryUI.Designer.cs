@@ -146,6 +146,7 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Report Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -156,6 +157,7 @@
             this.RentMgrBtn.TabIndex = 3;
             this.RentMgrBtn.Text = "Rental Mgr";
             this.RentMgrBtn.UseVisualStyleBackColor = true;
+            this.RentMgrBtn.Click += new System.EventHandler(this.RentMgrBtn_Click);
             // 
             // CustomMgrBtn
             // 
@@ -186,6 +188,7 @@
             this.EquipMgrBtn.TabIndex = 0;
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click);
             // 
             // Delete
             // 
