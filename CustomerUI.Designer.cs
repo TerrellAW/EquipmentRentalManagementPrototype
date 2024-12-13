@@ -154,8 +154,9 @@
             this.SysMgrBtn.Name = "SysMgrBtn";
             this.SysMgrBtn.Size = new System.Drawing.Size(168, 41);
             this.SysMgrBtn.TabIndex = 5;
-            this.SysMgrBtn.Text = "System Mgr";
+            this.SysMgrBtn.Text = "Home Page";
             this.SysMgrBtn.UseVisualStyleBackColor = true;
+            this.SysMgrBtn.Click += new System.EventHandler(this.SysMgrBtn_Click);
             // 
             // ReportMgrBtn
             // 

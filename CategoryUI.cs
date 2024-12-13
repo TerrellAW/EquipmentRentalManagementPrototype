@@ -146,7 +146,10 @@ namespace EquipmentRentalManagementPrototype
 
         private void EquipRentMgrBtn_Click(object sender, EventArgs e)
         {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
 
+            this.Hide();
         }
     }
 }

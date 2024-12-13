@@ -336,5 +336,13 @@ namespace EquipmentRentalManagementPrototype
 
             this.Hide();
         }
+
+        private void SysMgrBtn_Click(object sender, EventArgs e)
+        {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
+
+            this.Hide();
+        }
     }
 }
