@@ -39,7 +39,6 @@
             this.EquipMgrBtn = new System.Windows.Forms.Button();
             this.DiscountInput = new System.Windows.Forms.TextBox();
             this.Remove = new System.Windows.Forms.Button();
-            this.Save = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.EmailInput = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
@@ -121,7 +120,6 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.DiscountInput);
             this.splitContainer2.Panel2.Controls.Add(this.Remove);
-            this.splitContainer2.Panel2.Controls.Add(this.Save);
             this.splitContainer2.Panel2.Controls.Add(this.Add);
             this.splitContainer2.Panel2.Controls.Add(this.EmailInput);
             this.splitContainer2.Panel2.Controls.Add(this.EmailLabel);
@@ -168,6 +166,7 @@
             this.EquipRentMgrBtn.TabIndex = 4;
             this.EquipRentMgrBtn.Text = "Equipment Rental Mgr";
             this.EquipRentMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipRentMgrBtn.Click += new System.EventHandler(this.EquipRentMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
@@ -178,6 +177,7 @@
             this.RentMgrBtn.TabIndex = 3;
             this.RentMgrBtn.Text = "Rental Mgr";
             this.RentMgrBtn.UseVisualStyleBackColor = true;
+            this.RentMgrBtn.Click += new System.EventHandler(this.RentMgrBtn_Click);
             // 
             // CustomMgrBtn
             // 
@@ -198,6 +198,7 @@
             this.CatMgrBtn.TabIndex = 1;
             this.CatMgrBtn.Text = "Category Mgr";
             this.CatMgrBtn.UseVisualStyleBackColor = true;
+            this.CatMgrBtn.Click += new System.EventHandler(this.CatMgrBtn_Click);
             // 
             // EquipMgrBtn
             // 
@@ -208,6 +209,7 @@
             this.EquipMgrBtn.TabIndex = 0;
             this.EquipMgrBtn.Text = "Equipment Mgr";
             this.EquipMgrBtn.UseVisualStyleBackColor = true;
+            this.EquipMgrBtn.Click += new System.EventHandler(this.EquipMgrBtn_Click);
             // 
             // DiscountInput
             // 
@@ -222,27 +224,18 @@
             // Remove
             // 
             this.Remove.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Remove.Location = new System.Drawing.Point(520, 309);
+            this.Remove.Location = new System.Drawing.Point(511, 309);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(72, 26);
             this.Remove.TabIndex = 30;
             this.Remove.Text = "Remove";
             this.Remove.UseVisualStyleBackColor = false;
-            // 
-            // Save
-            // 
-            this.Save.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Save.Location = new System.Drawing.Point(418, 309);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(72, 26);
-            this.Save.TabIndex = 29;
-            this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = false;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // Add
             // 
             this.Add.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Add.Location = new System.Drawing.Point(312, 309);
+            this.Add.Location = new System.Drawing.Point(411, 309);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(72, 26);
             this.Add.TabIndex = 28;
@@ -444,7 +437,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(195, 22);
             this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating);
             // 
             // SearchCustomerLabel
             // 
@@ -533,7 +526,6 @@
         private System.Windows.Forms.Label PhoneLabel;
         private System.Windows.Forms.Label DiscountLabel;
         private System.Windows.Forms.Button Remove;
-        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TextBox DiscountInput;
     }

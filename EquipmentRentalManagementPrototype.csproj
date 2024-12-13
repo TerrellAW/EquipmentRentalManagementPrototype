@@ -126,6 +126,7 @@
       <DependentUpon>CustomerUI.cs</DependentUpon>
     </Compile>
     <Compile Include="database\CategoryRepository.cs" />
+    <Compile Include="database\CustomerRepository.cs" />
     <Compile Include="database\DBconnector.cs" />
     <Compile Include="database\EquipmentRepository.cs" />
     <Compile Include="domain\Category.cs" />
