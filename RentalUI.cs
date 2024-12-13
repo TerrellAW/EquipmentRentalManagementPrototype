@@ -4,6 +4,7 @@
  * Date: 2024/12/12
  * Description: Equipment Rent Management
  */
+using EquipmentRentalManagementPrototype.database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +17,14 @@ using System.Windows.Forms;
 
 namespace EquipmentRentalManagementPrototype
 {
-    public partial class Rental : Form
+    public partial class RentalUI : Form
     {
-        public Rental()
+        private RentalRepository rentalRepository;
+
+        public RentalUI()
         {
             InitializeComponent();
+            rentalRepository = new RentalRepository();
         }
 
         // Navigation buttons
@@ -59,7 +63,7 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click_1(object sender, EventArgs e)
         {
-            Rental rental = new Rental();
+            RentalUI rental = new RentalUI();
             rental.Show();
 
             this.Hide();
@@ -73,6 +77,43 @@ namespace EquipmentRentalManagementPrototype
             mainUI.Show();
 
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (addIdTextBox1.Text != "")
+            {
+                var rental = rentalRepository.GetRentalById(int.Parse(addIdTextBox1.Text));
+                if (rental != null)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add(rental).ToString();
+                }
+
+            }
+            else if (textBox1.Text != "")
+            {
+                var rental = rentalRepository.GetRentalByCustomerId(int.Parse(textBox1.Text));
+                if (rental != null)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add(rental).ToString();
+                }
+            }
+            // Trouble parsing string to DateTime
+            else if (textBox2.Text != "")
+            {
+                var rental = rentalRepository.GetRentalByDate(DateTime.Parse(textBox2.Text));
+                if (rental != null)
+                {
+                    listBox1.Items.Clear();
+                    listBox1.Items.Add(rental).ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill a field to search");
+            }
         }
     }
 }
