@@ -279,6 +279,7 @@ namespace EquipmentRentalManagementPrototype
                 DateTime returnDate = inputReturnDate.Date;
                 TimeSpan timeSpan = returnDate - rentDate;
                 double totalCost = timeSpan.Days * equipment.DailyRate;
+                inputCost = totalCost;
                 total.Text = totalCost.ToString("F2");
                 date.Text = currDate.ToString("yyyy-MM-dd");
             }
