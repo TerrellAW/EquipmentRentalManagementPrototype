@@ -16,6 +16,18 @@ namespace EquipmentRentalManagementPrototype.database
             dbConnector = new DBconnector();
         }
 
+        public List<Rental> GetAllRentals()
+        {
+            string query = "SELECT * FROM rental_list";
+            var result = dbConnector.ExecuteQuery(query);
+            List<Rental> rentals = new List<Rental>();
+            foreach (var item in result)
+            {
+                rentals.Add(new Rental((int)item["rental_id"], (DateTime)item["date"], (int)item["customer_id"], (int)item["equipment_id"], (DateTime)item["rental_date"], (DateTime)item["return_date"], (float)item["cost"]));
+            }
+            return rentals;
+        }
+
         public void AddRental(Rental rental)
         {
             string query = $"INSERT INTO rental_list (rental_id, date, customer_id, equipment_id, rental_date, return_date, cost) VALUES ('{rental.RentalId}', '{rental.Date.ToString("yyyy-MM-dd")}', {rental.CustomerId}, {rental.EquipmentId}, '{rental.RentalDate.ToString("yyyy-MM-dd")}', '{rental.ReturnDate.ToString("yyyy-MM-dd")}', {rental.Cost})";
@@ -56,6 +68,13 @@ namespace EquipmentRentalManagementPrototype.database
             }
 
             return new Rental((int)result[0]["rental_id"], (DateTime)result[0]["date"], (int)result[0]["customer_id"], (int)result[0]["equipment_id"], (DateTime)result[0]["rental_date"], (DateTime)result[0]["return_date"], (float)result[0]["cost"]);
+        }
+
+
+        public void DeleteRental(int id)
+        {
+            string query = $"DELETE FROM rental_list WHERE rental_id = {id}";
+            dbConnector.ExecuteQuery(query);
         }
     }
 }

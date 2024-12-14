@@ -117,7 +117,7 @@
             this.SysMgrBtn.TabIndex = 5;
             this.SysMgrBtn.Text = "Home Page";
             this.SysMgrBtn.UseVisualStyleBackColor = true;
-            this.SysMgrBtn.Click += new System.EventHandler(this.SysMgrBtn_Click);
+            this.SysMgrBtn.Click += new System.EventHandler(this.Home_Click);
             // 
             // ReportMgrBtn
             // 
@@ -128,6 +128,7 @@
             this.ReportMgrBtn.TabIndex = 4;
             this.ReportMgrBtn.Text = "Report Mgr";
             this.ReportMgrBtn.UseVisualStyleBackColor = true;
+            this.ReportMgrBtn.Click += new System.EventHandler(this.ReportMgrBtn_Click);
             // 
             // RentMgrBtn
             // 
