@@ -43,12 +43,12 @@ namespace EquipmentRentalManagementPrototype
             equipmentRepository = new EquipmentRepository();
         }
 
-        //private void RentalUI_Load(object sender, EventArgs e)
-        //{
-        //    customerRepository.GetAllCustomers();
-        //    Debug.WriteLine("Customer List Contains:\n");
-        //    CustomerManager.ListData();
-        //}
+        private void RentalUI_Load(object sender, EventArgs e)
+        {
+            customerRepository.GetAllCustomers();
+            Debug.WriteLine("Customer List Contains:\n");
+            CustomerManager.ListData();
+        }
 
         // Search button
         private void button1_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace EquipmentRentalManagementPrototype
                     if (rental != null)
                     {
                         listBox1.Items.Clear();
-                        listBox1.Items.Add(rental).ToString();
+                        listBox1.Items.Add(rental);
                     }
                 }
                 catch
@@ -80,7 +80,7 @@ namespace EquipmentRentalManagementPrototype
                     if (rental != null)
                     {
                         listBox1.Items.Clear();
-                        listBox1.Items.Add(rental).ToString();
+                        listBox1.Items.Add(rental);
                     }
                 }
                 catch
@@ -97,7 +97,7 @@ namespace EquipmentRentalManagementPrototype
                     if (rental != null)
                     {
                         listBox1.Items.Clear();
-                        listBox1.Items.Add(rental).ToString();
+                        listBox1.Items.Add(rental);
                     }
                 }
                 catch
@@ -184,7 +184,7 @@ namespace EquipmentRentalManagementPrototype
                 Debug.WriteLine(customer.ToString());
                 if (customer != null)
                 {
-                    label10.Text = customer.FirstName + " " + customer.LastName;
+                    label10.Text = $"{customer.FirstName} {customer.LastName}";
                 }
                 else
                 {
@@ -227,7 +227,7 @@ namespace EquipmentRentalManagementPrototype
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             DateTimePicker input = (DateTimePicker)sender;
-            inputRentDate = input.Value;
+            inputRentDate = input.Value.Date;
 
             CalculateTotal();
         }
@@ -236,7 +236,7 @@ namespace EquipmentRentalManagementPrototype
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             DateTimePicker input = (DateTimePicker)sender;
-            inputReturnDate = input.Value;
+            inputReturnDate = input.Value.Date;
 
             CalculateTotal();
         }
@@ -254,11 +254,20 @@ namespace EquipmentRentalManagementPrototype
                 textBox5.Text = rental.EquipmentId.ToString();
                 dateTimePicker1.Value = rental.RentalDate;
                 dateTimePicker2.Value = rental.ReturnDate;
-                label10.Text = customer.FirstName + customer.LastName;
+                customer = CustomerManager.SearchCustomerId(rental.CustomerId);
 
-                date.Text = rental.Date.ToString();
+                if (customer != null)
+                {
+                    label10.Text = $"{customer.FirstName} {customer.LastName}";
+                }
+                else
+                {
+                    label10.Text = "";
+                }
+
+                date.Text = rental.Date.ToString("yyyy-MM-dd");
               
-                total.Text = rental.Cost.ToString();
+                total.Text = rental.Cost.ToString("F2");
             }
         }
 
@@ -266,15 +275,17 @@ namespace EquipmentRentalManagementPrototype
         {
             if (equipment != null && inputRentDate != null && inputReturnDate != null)
             {
-                TimeSpan timeSpan = inputReturnDate - inputRentDate;
+                DateTime rentDate = inputRentDate.Date;
+                DateTime returnDate = inputReturnDate.Date;
+                TimeSpan timeSpan = returnDate - rentDate;
                 double totalCost = timeSpan.Days * equipment.DailyRate;
                 total.Text = totalCost.ToString("F2");
-                date.Text = currDate.ToString();
+                date.Text = currDate.ToString("yyyy-MM-dd");
             }
             else
             {
                 total.Text = "0.00";
-                date.Text = currDate.ToString();
+                date.Text = currDate.ToString("yyyy-MM-dd");
             }
         }
 
@@ -299,7 +310,7 @@ namespace EquipmentRentalManagementPrototype
             var rentals = rentalRepository.GetAllRentals();
             foreach (var rental in rentals)
             {
-                listBox1.Items.Add(rental.ToString());
+                listBox1.Items.Add(rental);
             }
         }
 
