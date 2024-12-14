@@ -12,3 +12,5 @@ bin/
 *.vspx
 *.sdf
 *.opensdf
+/bin/Debug
+/bin/Debug
