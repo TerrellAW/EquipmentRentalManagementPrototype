@@ -43,67 +43,17 @@ namespace EquipmentRentalManagementPrototype
             equipmentRepository = new EquipmentRepository();
         }
 
-        private void RentalUI_Load(object sender, EventArgs e)
-        {
-            customerRepository.GetAllCustomers();
-            Debug.WriteLine("Customer List Contains:\n");
-            CustomerManager.ListData();
-        }
-
-        // Navigation buttons
-        private void ReportMgrBtn_Click(object sender, EventArgs e)
-        {
-            ReportUI reportUI = new ReportUI();
-            reportUI.Show();
-
-            this.Hide();
-        }
-
-        private void CustomMgrBtn_Click_1(object sender, EventArgs e)
-        {
-            CustomerUI customerUI = new CustomerUI();
-            customerUI.Show();
-
-            this.Hide();
-        }
-
-        private void EquipMgrBtn_Click_1(object sender, EventArgs e)
-        {
-            EquipmentUI equipmentUI = new EquipmentUI();
-            equipmentUI.Show();
-
-            this.Hide();
-        }
-
-        private void CatMgrBtn_Click_1(object sender, EventArgs e)
-        {
-            CategoryUI categoryUI = new CategoryUI();
-            categoryUI.Show();
-
-            this.Hide();
-        }
-
-        private void RentMgrBtn_Click_1(object sender, EventArgs e)
-        {
-            RentalUI rental = new RentalUI();
-            rental.Show();
-
-            this.Hide();
-        }
-
-
-
-        private void Home_Click_1(object sender, EventArgs e)
-        {
-            MainUI mainUI = new MainUI();
-            mainUI.Show();
-
-            this.Hide();
-        }
+        //private void RentalUI_Load(object sender, EventArgs e)
+        //{
+        //    customerRepository.GetAllCustomers();
+        //    Debug.WriteLine("Customer List Contains:\n");
+        //    CustomerManager.ListData();
+        //}
 
         // Search button
         private void button1_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             // Search by rental ID
             if (addIdTextBox1.Text != "")
             {
@@ -180,6 +130,12 @@ namespace EquipmentRentalManagementPrototype
             rentalRepository.AddRental(rental);
 
             // Clear textboxes
+            addIdTextBox1.Text = string.Empty;
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+            total.Text = string.Empty;
             textBox5.Text = string.Empty;
             textBox3.Text = string.Empty;
             label10.Text = string.Empty;
@@ -199,7 +155,7 @@ namespace EquipmentRentalManagementPrototype
                 Debug.WriteLine(equipment.ToString());
                 if (equipment != null)
                 {
-                    
+                   
                 }
                 else
                 {
@@ -228,8 +184,7 @@ namespace EquipmentRentalManagementPrototype
                 Debug.WriteLine(customer.ToString());
                 if (customer != null)
                 {
-                    label10.Text = customer.FirstName;
-                    label13.Text = customer.LastName;
+                    label10.Text = customer.FirstName + " " + customer.LastName;
                 }
                 else
                 {
@@ -273,6 +228,8 @@ namespace EquipmentRentalManagementPrototype
         {
             DateTimePicker input = (DateTimePicker)sender;
             inputRentDate = input.Value;
+
+            CalculateTotal();
         }
 
         // Return date
@@ -280,6 +237,124 @@ namespace EquipmentRentalManagementPrototype
         {
             DateTimePicker input = (DateTimePicker)sender;
             inputReturnDate = input.Value;
+
+            CalculateTotal();
+        }
+        
+
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Rental rental = (Rental)listBox1.SelectedItem;
+
+                IdInput.Text = rental.RentalId.ToString();
+                textBox3.Text = rental.CustomerId.ToString();
+                textBox5.Text = rental.EquipmentId.ToString();
+                dateTimePicker1.Value = rental.RentalDate;
+                dateTimePicker2.Value = rental.ReturnDate;
+                label10.Text = customer.FirstName + customer.LastName;
+
+                date.Text = rental.Date.ToString();
+              
+                total.Text = rental.Cost.ToString();
+            }
+        }
+
+        private void CalculateTotal()
+        {
+            if (equipment != null && inputRentDate != null && inputReturnDate != null)
+            {
+                TimeSpan timeSpan = inputReturnDate - inputRentDate;
+                double totalCost = timeSpan.Days * equipment.DailyRate;
+                total.Text = totalCost.ToString("F2");
+                date.Text = currDate.ToString();
+            }
+            else
+            {
+                total.Text = "0.00";
+                date.Text = currDate.ToString();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Rental rental = (Rental)listBox1.SelectedItem;
+                rentalRepository.DeleteRental(rental.RentalId);
+                listBox1.Items.Remove(listBox1.SelectedItem);
+                MessageBox.Show("Rental deleted");
+            }
+            else
+            {
+                MessageBox.Show("Please select a rental to delete");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            var rentals = rentalRepository.GetAllRentals();
+            foreach (var rental in rentals)
+            {
+                listBox1.Items.Add(rental.ToString());
+            }
+        }
+
+
+
+
+
+
+        // Navigation buttons
+        private void ReportMgrBtn_Click(object sender, EventArgs e)
+        {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
+
+            this.Hide();
+        }
+
+        private void CustomMgrBtn_Click(object sender, EventArgs e)
+        {
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
+
+            this.Hide();
+        }
+
+        private void EquipMgrBtn_Click(object sender, EventArgs e)
+        {
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
+
+            this.Hide();
+        }
+
+        private void CatMgrBtn_Click(object sender, EventArgs e)
+        {
+            CategoryUI categoryUI = new CategoryUI();
+            categoryUI.Show();
+
+            this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+            RentalUI rental = new RentalUI();
+            rental.Show();
+
+            this.Hide();
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            MainUI mainUI = new MainUI();
+            mainUI.Show();
+
+            this.Hide();
         }
     }
 }

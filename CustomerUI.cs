@@ -309,6 +309,8 @@ namespace EquipmentRentalManagementPrototype
             }
         }
 
+
+        // Navigation buttons
         private void EquipMgrBtn_Click(object sender, EventArgs e)
         {
             EquipmentUI equipmentUI = new EquipmentUI();
@@ -343,8 +345,8 @@ namespace EquipmentRentalManagementPrototype
 
         private void RentMgrBtn_Click(object sender, EventArgs e)
         {
-            Rental rental = new Rental();
-            rental.Show();
+            RentalUI rentalUI = new RentalUI();
+            rentalUI.Show();
 
             this.Hide();
         }
@@ -353,6 +355,6 @@ namespace EquipmentRentalManagementPrototype
         {
             CustomerUI customerUI = new CustomerUI();
             customerUI.Show();
-
+        }
     }
 }

@@ -32,38 +32,6 @@ namespace EquipmentRentalManagementPrototype
 
         }
 
-        private void EquipMgrBtn_Click(object sender, EventArgs e)
-        {
-            EquipmentUI equipmentUI = new EquipmentUI();
-            equipmentUI.Show();
-
-            this.Hide();
-        }
-
-        private void CatMgrBtn_Click(object sender, EventArgs e)
-        {
-            CategoryUI categoryUI = new CategoryUI();
-            categoryUI.Show();
-
-            this.Hide();
-        }
-
-        private void CustomMgrBtn_Click(object sender, EventArgs e)
-        {
-            CustomerUI customerUI = new CustomerUI();
-            customerUI.Show();
-
-            this.Hide();
-        }
-
-        private void RentMgrBtn_Click(object sender, EventArgs e)
-        {
-            RentalUI rental = new RentalUI();
-            rental.Show();
-
-            this.Hide();
-        }
-
         private void ReportSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)sender;
@@ -166,12 +134,55 @@ namespace EquipmentRentalManagementPrototype
             }
         }
 
-        private void SysMgrBtn_Click(object sender, EventArgs e)
+
+        // Navigation buttons
+        private void Home_Click(object sender, EventArgs e)
         {
             MainUI mainUI = new MainUI();
             mainUI.Show();
 
             this.Hide();
         }
+
+        private void EquipMgrBtn_Click(object sender, EventArgs e)
+        {
+            EquipmentUI equipmentUI = new EquipmentUI();
+            equipmentUI.Show();
+
+            this.Hide();
+        }
+
+        private void CatMgrBtn_Click(object sender, EventArgs e)
+        {
+            CategoryUI categoryUI = new CategoryUI();
+            categoryUI.Show();
+
+            this.Hide();
+        }
+
+        private void CustomMgrBtn_Click(object sender, EventArgs e)
+        {
+            CustomerUI customerUI = new CustomerUI();
+            customerUI.Show();
+
+            this.Hide();
+        }
+
+        private void RentMgrBtn_Click(object sender, EventArgs e)
+        {
+            RentalUI rental = new RentalUI();
+            rental.Show();
+
+            this.Hide();
+        }
+
+        private void ReportMgrBtn_Click(object sender, EventArgs e)
+        {
+            ReportUI reportUI = new ReportUI();
+            reportUI.Show();
+
+            this.Hide();
+        }
+        
     }
 }
