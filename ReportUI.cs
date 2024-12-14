@@ -107,24 +107,6 @@ namespace EquipmentRentalManagementPrototype
                 foreach (var row in ItemsByCategory)
                 {
                     int categoryId = (int)row["category_id"];
-                    switch (categoryId)
-                    {
-                        case 10:
-                            row["category_id"] = "Power Tools";
-                            break;
-                        case 20:
-                            row["category_id"] = "Yard Equipment";
-                            break;
-                        case 30:
-                            row["category_id"] = "Compressors";
-                            break;
-                        case 40:
-                            row["category_id"] = "Generators";
-                            break;
-                        case 50:
-                            row["category_id"] = "Air Tools";
-                            break;
-                    }
                     ReportDataGrid.Rows.Add(row["category_id"].ToString(), row["equipment_name"].ToString());
                 }
             }
