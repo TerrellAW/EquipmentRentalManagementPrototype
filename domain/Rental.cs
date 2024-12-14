@@ -80,7 +80,7 @@ namespace EquipmentRentalManagementPrototype.domain
         public override string ToString()
         {
             return
-                $"{_rentalId} - {_date} - {_cost} \n";
+                $"{_rentalId} - {_date:yyyy-MM-dd} - ${_cost:F2} \n";
         }
     }
 }
